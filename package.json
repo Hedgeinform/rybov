@@ -12,6 +12,7 @@
     "dev:web": "npm --workspace web run dev",
     "verify:openrouter": "npm --workspace pipeline run verify:openrouter",
     "dry-run": "npm --workspace pipeline run dry-run",
-    "daily": "npm --workspace pipeline run daily"
+    "daily": "npm --workspace pipeline run daily",
+    "post-tg": "npm --workspace pipeline run post-tg"
   }
 }
