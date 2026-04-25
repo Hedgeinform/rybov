@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { renderBody, renderTail, renderFin, renderEye } from '../../src/renderer/primitives.ts';
+import { renderBody, renderTail, renderFin, renderEye, renderBackgroundBlock, renderAccent } from '../../src/renderer/primitives.ts';
 
 describe('renderBody', () => {
   it('renders triangle pointing right', () => {
@@ -53,5 +53,25 @@ describe('renderFin', () => {
   it('renders top fin as a triangle above the body midline', () => {
     const svg = renderFin({ primitive: 'triangle', color: 'blue' }, 'top');
     expect(svg).toContain('<polygon');
+  });
+});
+
+describe('renderBackgroundBlock', () => {
+  it('renders a colored rectangle at offset', () => {
+    const svg = renderBackgroundBlock({ color: 'yellow', size: 'large', offset: [-15, -15] });
+    expect(svg).toContain('<rect');
+    expect(svg).toContain('#F5C518');
+  });
+});
+
+describe('renderAccent', () => {
+  it('renders horizontal_line as a line element', () => {
+    const svg = renderAccent({ type: 'horizontal_line', color: 'black', position: 'midline' });
+    expect(svg).toContain('<line');
+    expect(svg).toContain('#111111');
+  });
+  it('renders dot as a small circle', () => {
+    const svg = renderAccent({ type: 'dot', color: 'red', position: 'midline' });
+    expect(svg).toContain('<circle');
   });
 });
