@@ -4,6 +4,7 @@ import type { DSL } from '../../src/dsl/schema.ts';
 
 const triangleArrow: DSL = {
   body: { primitive: 'composite_two_triangles', orientation: 'right', color: 'blue' },
+  head: null,
   eye: { style: 'double_circle', position: 'front_top' },
   tail: { primitive: 'triangle', color: 'red', side: 'left' },
   fin_top: null, fin_bottom: null,
@@ -23,8 +24,8 @@ describe('render', () => {
   it('orders elements: bg fill → bg_block → accents → body → tail → fins → eye', () => {
     const svg = render(triangleArrow);
     // Yellow block must appear BEFORE blue body in the SVG string
-    const yellowIdx = svg.indexOf('#F5C518');
-    const blueIdx = svg.indexOf('#1E5BCC');
+    const yellowIdx = svg.indexOf('#C8A435');
+    const blueIdx = svg.indexOf('#3D2E8C');
     expect(yellowIdx).toBeGreaterThan(0);
     expect(blueIdx).toBeGreaterThan(yellowIdx);
   });

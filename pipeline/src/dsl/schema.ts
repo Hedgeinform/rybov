@@ -14,6 +14,18 @@ export const PRIMITIVES = [
 export const PrimitiveSchema = z.enum(PRIMITIVES);
 export type Primitive = z.infer<typeof PrimitiveSchema>;
 
+export const HEAD_PRIMITIVES = ['circle', 'oval', 'triangle'] as const;
+export const HeadPrimitiveSchema = z.enum(HEAD_PRIMITIVES);
+export type HeadPrimitive = z.infer<typeof HeadPrimitiveSchema>;
+
+export const TAIL_PRIMITIVES = ['triangle', 'rectangle', 'arrow', 'fork'] as const;
+export const TailPrimitiveSchema = z.enum(TAIL_PRIMITIVES);
+export type TailPrimitive = z.infer<typeof TailPrimitiveSchema>;
+
+export const FIN_TILTS = ['perpendicular', 'tilted_forward', 'tilted_backward'] as const;
+export const FinTiltSchema = z.enum(FIN_TILTS);
+export type FinTilt = z.infer<typeof FinTiltSchema>;
+
 export const ORIENTATIONS = ['left', 'right'] as const;
 export const OrientationSchema = z.enum(ORIENTATIONS);
 export type Orientation = z.infer<typeof OrientationSchema>;
@@ -21,7 +33,8 @@ export type Orientation = z.infer<typeof OrientationSchema>;
 export const POSITIONS = [
   'front_top', 'front_center', 'front_low',
   'midline', 'low',
-  'tail_side', 'head_top', 'head_bottom',
+  'tail_side',
+  'head_top', 'head_center', 'head_bottom',
 ] as const;
 export const PositionSchema = z.enum(POSITIONS);
 
@@ -48,20 +61,26 @@ export const BodySchema = z.object({
   color: ColorSchema,
 });
 
+export const HeadSchema = z.object({
+  primitive: HeadPrimitiveSchema,
+  color: ColorSchema,
+}).nullable();
+
 export const EyeSchema = z.object({
   style: EyeStyleSchema,
   position: PositionSchema,
 });
 
 export const TailSchema = z.object({
-  primitive: PrimitiveSchema,
+  primitive: TailPrimitiveSchema,
   color: ColorSchema,
   side: OrientationSchema,
 }).nullable();
 
 export const FinSchema = z.object({
-  primitive: PrimitiveSchema,
+  primitive: z.literal('triangle'),
   color: ColorSchema,
+  tilt: FinTiltSchema,
 }).nullable();
 
 export const BackgroundBlockSchema = z.object({
@@ -78,6 +97,7 @@ export const AccentSchema = z.object({
 
 export const DSLSchema = z.object({
   body: BodySchema,
+  head: HeadSchema,
   eye: EyeSchema,
   tail: TailSchema,
   fin_top: FinSchema,

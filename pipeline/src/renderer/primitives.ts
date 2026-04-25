@@ -1,5 +1,8 @@
 import { hex, VIEWBOX } from './palette.ts';
-import type { Color, Primitive, Orientation } from './schema-helpers.ts';
+import type {
+  Color, Primitive, Orientation,
+  HeadPrimitive, TailPrimitive, FinTilt,
+} from './schema-helpers.ts';
 
 export type RenderColor = Color;
 export type RenderPrimitive = Primitive;
@@ -10,6 +13,11 @@ const CY = VIEWBOX.h / 2;     // 70
 const BODY_W = 110;
 const BODY_H = 60;
 
+const BODY_LEFT = CX - BODY_W / 2;   // 45
+const BODY_RIGHT = CX + BODY_W / 2;  // 155
+const BODY_TOP = CY - BODY_H / 2;    // 40
+const BODY_BOTTOM = CY + BODY_H / 2; // 100
+
 interface BodyParams {
   primitive: RenderPrimitive;
   orientation: RenderOrientation;
@@ -18,10 +26,10 @@ interface BodyParams {
 
 export function renderBody({ primitive, orientation, color }: BodyParams): string {
   const fill = hex(color);
-  const left = CX - BODY_W / 2;
-  const right = CX + BODY_W / 2;
-  const top = CY - BODY_H / 2;
-  const bottom = CY + BODY_H / 2;
+  const left = BODY_LEFT;
+  const right = BODY_RIGHT;
+  const top = BODY_TOP;
+  const bottom = BODY_BOTTOM;
 
   switch (primitive) {
     case 'triangle': {
@@ -64,13 +72,51 @@ export function renderBody({ primitive, orientation, color }: BodyParams): strin
   }
 }
 
+const HEAD_W = 32;
+const HEAD_H = 32;
+
+export function headCenter(orientation: RenderOrientation): { cx: number; cy: number } {
+  const cx = orientation === 'right' ? BODY_RIGHT + 5 : BODY_LEFT - 5;
+  return { cx, cy: CY };
+}
+
+interface HeadParams {
+  primitive: HeadPrimitive;
+  color: RenderColor;
+  orientation: RenderOrientation; // taken from body
+}
+
+export function renderHead({ primitive, color, orientation }: HeadParams): string {
+  const fill = hex(color);
+  const { cx, cy } = headCenter(orientation);
+  const r = HEAD_W / 2;
+  const top = cy - HEAD_H / 2;
+  const bottom = cy + HEAD_H / 2;
+
+  switch (primitive) {
+    case 'circle':
+      return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${fill}"/>`;
+    case 'oval': {
+      const rx = HEAD_W / 2;
+      const ry = HEAD_H / 2.6;
+      return `<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="${fill}"/>`;
+    }
+    case 'triangle': {
+      const tip = orientation === 'right' ? cx + r : cx - r;
+      const baseX = orientation === 'right' ? cx - r : cx + r;
+      return `<polygon points="${tip},${cy} ${baseX},${top} ${baseX},${bottom}" fill="${fill}"/>`;
+    }
+  }
+}
+
 const TAIL_W = 35;
 const TAIL_H = 60;
 
-interface TailParams { primitive: RenderPrimitive; color: RenderColor; side: RenderOrientation; }
+interface TailParams { primitive: TailPrimitive; color: RenderColor; side: RenderOrientation; }
+
 export function renderTail({ primitive, color, side }: TailParams): string {
   const fill = hex(color);
-  const baseX = side === 'left' ? CX - BODY_W / 2 : CX + BODY_W / 2;
+  const baseX = side === 'left' ? BODY_LEFT : BODY_RIGHT;
   const tipX = side === 'left' ? baseX - TAIL_W : baseX + TAIL_W;
   const top = CY - TAIL_H / 2;
   const bottom = CY + TAIL_H / 2;
@@ -78,30 +124,72 @@ export function renderTail({ primitive, color, side }: TailParams): string {
   switch (primitive) {
     case 'triangle':
       return `<polygon points="${baseX},${CY} ${tipX},${top} ${tipX},${bottom}" fill="${fill}"/>`;
-    case 'rectangle':
-      return `<rect x="${Math.min(baseX, tipX)}" y="${top}" width="${TAIL_W}" height="${TAIL_H}" fill="${fill}"/>`;
-    default:
-      return `<polygon points="${baseX},${CY} ${tipX},${top} ${tipX},${bottom}" fill="${fill}"/>`;
+    case 'rectangle': {
+      const x = Math.min(baseX, tipX);
+      return `<rect x="${x}" y="${top}" width="${TAIL_W}" height="${TAIL_H}" fill="${fill}"/>`;
+    }
+    case 'arrow': {
+      const notchInset = side === 'left' ? tipX + 17 : tipX - 17;
+      return `<polygon points="${baseX},${CY} ${tipX},${top} ${notchInset},${CY} ${tipX},${bottom}" fill="${fill}"/>`;
+    }
+    case 'fork': {
+      const notchInner = side === 'left' ? tipX + 15 : tipX - 15;
+      const notchTopY = CY - 10;
+      const notchBottomY = CY + 10;
+      return `<polygon points="${baseX},${CY} ${tipX},${top} ${tipX},${notchTopY} ${notchInner},${notchTopY} ${notchInner},${notchBottomY} ${tipX},${notchBottomY} ${tipX},${bottom}" fill="${fill}"/>`;
+    }
   }
 }
 
 const FIN_SIZE = 20;
-interface FinParams { primitive: RenderPrimitive; color: RenderColor; }
-export function renderFin({ color }: FinParams, where: 'top' | 'bottom'): string {
+const FIN_TILT_OFFSET = 12;
+
+interface FinParams { primitive: 'triangle'; color: RenderColor; tilt: FinTilt; }
+
+export function renderFin(
+  { color, tilt }: FinParams,
+  where: 'top' | 'bottom',
+  bodyOrientation: RenderOrientation,
+): string {
   const fill = hex(color);
-  const baseY = where === 'top' ? CY - BODY_H / 2 : CY + BODY_H / 2;
+  const baseY = where === 'top' ? BODY_TOP : BODY_BOTTOM;
   const tipY = where === 'top' ? baseY - FIN_SIZE : baseY + FIN_SIZE;
   const x1 = CX - FIN_SIZE / 2;
   const x2 = CX + FIN_SIZE / 2;
-  return `<polygon points="${x1},${baseY} ${x2},${baseY} ${CX},${tipY}" fill="${fill}"/>`;
+
+  let apexX = CX;
+  if (tilt === 'tilted_forward') {
+    apexX = bodyOrientation === 'right' ? CX + FIN_TILT_OFFSET : CX - FIN_TILT_OFFSET;
+  } else if (tilt === 'tilted_backward') {
+    apexX = bodyOrientation === 'right' ? CX - FIN_TILT_OFFSET : CX + FIN_TILT_OFFSET;
+  }
+
+  return `<polygon points="${x1},${baseY} ${x2},${baseY} ${apexX},${tipY}" fill="${fill}"/>`;
 }
 
-interface EyeParams { style: 'double_circle' | 'dot' | 'circle' | 'square'; position: string; }
-export function renderEye({ style, position }: EyeParams): string {
-  const eyeX = CX + 35;
-  const eyeY = position === 'front_top' ? CY - 12
-            : position === 'front_low' ? CY + 12
-            : CY;
+interface EyeParams {
+  style: 'double_circle' | 'dot' | 'circle' | 'square';
+  position: string;
+  hasHead: boolean;
+  bodyOrientation: RenderOrientation;
+}
+
+export function renderEye({ style, position, hasHead, bodyOrientation }: EyeParams): string {
+  let eyeX: number;
+  let eyeY: number;
+
+  if (hasHead) {
+    const { cx, cy } = headCenter(bodyOrientation);
+    eyeX = cx;
+    eyeY = position === 'head_top' ? cy - 8
+         : position === 'head_bottom' ? cy + 8
+         : cy;
+  } else {
+    eyeX = bodyOrientation === 'right' ? CX + 35 : CX - 35;
+    eyeY = position === 'front_top' ? CY - 12
+         : position === 'front_low' ? CY + 12
+         : CY;
+  }
 
   const outerR = 9;
   const innerR = 3.5;
@@ -137,7 +225,7 @@ export function renderAccent({ type, color, position }: AccentParams): string {
   const stroke = hex(color);
   const yMap: Record<string, number> = {
     midline: CY, low: CY + 18, front_top: CY - 18, front_center: CY,
-    front_low: CY + 12, head_top: CY - 25, head_bottom: CY + 25,
+    front_low: CY + 12, head_top: CY - 25, head_center: CY, head_bottom: CY + 25,
     tail_side: CY,
   };
   const y = yMap[position] ?? CY;
