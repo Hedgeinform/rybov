@@ -2646,7 +2646,7 @@ Simplest path: copy `tokens.css` + `typography.css` into `web/public/arkadiy-ds/
 
 ```js
 // web/scripts/copy-ds.mjs
-import { mkdir, copyFile } from 'node:fs/promises';
+import { mkdir, copyFile, cp } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -2657,7 +2657,13 @@ const DST = resolve(__dirname, '../public/arkadiy-ds');
 await mkdir(DST, { recursive: true });
 await copyFile(`${SRC}/tokens.css`, `${DST}/tokens.css`);
 await copyFile(`${SRC}/typography.css`, `${DST}/typography.css`);
-console.log('Copied arkadiy-ds tokens.css + typography.css to web/public/arkadiy-ds/');
+
+// fonts/ MUST be copied alongside CSS — typography.css uses relative
+// `url('fonts/...')` paths in @font-face declarations. Without this,
+// the browser 404s on every woff2 and falls back to system-ui.
+await cp(`${SRC}/fonts`, `${DST}/fonts`, { recursive: true });
+
+console.log('Copied arkadiy-ds tokens.css + typography.css + fonts/ to web/public/arkadiy-ds/');
 ```
 
 - [ ] **Step 3: Write the layout**
@@ -2683,9 +2689,10 @@ const baseHref = (import.meta.env.BASE_URL ?? '/').replace(/\/$/, '');
     {ogImage && <meta property="og:image" content={ogImage} />}
     <meta property="og:title" content={title} />
     {description && <meta property="og:description" content={description} />}
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" />
+    {/* Fonts self-hosted via @font-face declarations in typography.css.
+        DO NOT add Google Fonts <link> here — DS README explicitly forbids
+        for production (CSP, GDPR, extra hop). Prototype-only fallback path
+        is documented in design-system/arkadiy-ds/README.md if ever needed. */}
     <link rel="stylesheet" href={`${baseHref}/arkadiy-ds/tokens.css`} />
     <link rel="stylesheet" href={`${baseHref}/arkadiy-ds/typography.css`} />
     <style is:global>
@@ -2749,7 +2756,7 @@ const baseHref = (import.meta.env.BASE_URL ?? '/').replace(/\/$/, '');
 npm run build:web
 ```
 
-Expected: dist contains `arkadiy-ds/tokens.css` etc.
+Expected: `web/dist/arkadiy-ds/tokens.css`, `web/dist/arkadiy-ds/typography.css`, and `web/dist/arkadiy-ds/fonts/*.woff2` (12 woff2 files: 4 Manrope weights × 2 subsets + 2 Plex Mono weights × 2 subsets) all present.
 
 - [ ] **Step 5: Commit**
 
