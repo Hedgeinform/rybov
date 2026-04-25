@@ -1,0 +1,37 @@
+---
+import Default from '../layouts/Default.astro';
+import Fish from '../components/Fish.astro';
+import ConceptCard from '../components/ConceptCard.astro';
+import { listAllDates, loadFish, loadEmptyDay } from '../lib/fish-loader.ts';
+
+export async function getStaticPaths() {
+  const dates = await listAllDates();
+  const out = [];
+  for (const date of dates) {
+    const fish = await loadFish(date);
+    const empty = fish ? null : await loadEmptyDay(date);
+    out.push({ params: { date }, props: { fish, empty } });
+  }
+  return out;
+}
+
+const { fish, empty } = Astro.props;
+const { date } = Astro.params;
+---
+<Default
+  title={fish ? `${date} · ${fish.record.stage1.word} — Rybov` : `${date} — Rybov`}
+  description={fish ? fish.record.stage2.description.slice(0, 200) : undefined}
+>
+  {fish && (
+    <Fragment>
+      <Fish svg={fish.svg} date={date} alt={`Concept fish for ${date}`} />
+      <ConceptCard stage1={fish.record.stage1} stage2={fish.record.stage2} stage3={fish.record.stage3} />
+    </Fragment>
+  )}
+  {empty && (
+    <Fragment>
+      <h1>{date} — Без рыбы</h1>
+      <p>{empty.reason}</p>
+    </Fragment>
+  )}
+</Default>

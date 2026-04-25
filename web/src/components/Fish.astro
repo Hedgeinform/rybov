@@ -1,0 +1,8 @@
+---
+interface Props { svg: string; date: string; alt: string; }
+const { svg, date, alt } = Astro.props;
+---
+<figure class="fish-figure" aria-label={alt}>
+  <Fragment set:html={svg} />
+</figure>
+<div class="fig-label">FIG. {date}</div>

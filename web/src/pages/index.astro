@@ -1,3 +1,31 @@
 ---
+import Default from '../layouts/Default.astro';
+import Fish from '../components/Fish.astro';
+import ConceptCard from '../components/ConceptCard.astro';
+import { loadLatest } from '../lib/fish-loader.ts';
+
+const latest = await loadLatest();
 ---
-<html><body><h1>Rybov — coming soon</h1></body></html>
+<Default
+  title={latest && latest.kind === 'fish' ? `${latest.data.date} · ${latest.data.record.stage1.word} — Rybov` : 'Rybov'}
+  description={latest && latest.kind === 'fish' ? latest.data.record.stage2.description.slice(0, 200) : 'One concept-art fish per day.'}
+>
+  {latest === null && <p>Сегодня пока без рыбы.</p>}
+  {latest && latest.kind === 'empty' && (
+    <Fragment>
+      <h1>Сегодня без рыбы</h1>
+      <p class="fig-label">FIG. {latest.data.date}</p>
+      <p>{latest.data.reason}</p>
+    </Fragment>
+  )}
+  {latest && latest.kind === 'fish' && (
+    <Fragment>
+      <Fish svg={latest.data.svg} date={latest.data.date} alt={`Concept fish for ${latest.data.date}`} />
+      <ConceptCard
+        stage1={latest.data.record.stage1}
+        stage2={latest.data.record.stage2}
+        stage3={latest.data.record.stage3}
+      />
+    </Fragment>
+  )}
+</Default>

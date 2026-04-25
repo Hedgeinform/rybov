@@ -1,0 +1,47 @@
+---
+import Default from '../layouts/Default.astro';
+import { listAllDates, loadFish, loadEmptyDay } from '../lib/fish-loader.ts';
+
+interface Cell {
+  date: string;
+  kind: 'fish' | 'empty';
+  word: string;
+  svg: string | null;
+  reason: string | null;
+}
+
+const dates = await listAllDates();
+const items: Cell[] = [];
+for (const date of dates) {
+  const fish = await loadFish(date);
+  if (fish) {
+    items.push({ date, kind: 'fish', word: fish.record.stage1.word, svg: fish.svg, reason: null });
+  } else {
+    const e = await loadEmptyDay(date);
+    if (e) items.push({ date, kind: 'empty', word: '—', svg: null, reason: e.reason });
+  }
+}
+const baseHref = (import.meta.env.BASE_URL ?? '/').replace(/\/$/, '');
+---
+<Default title="Архив — Rybov" description="Все рыбы, по дате">
+  <h1>Архив</h1>
+  {items.length === 0 && <p class="fig-label">Архив пока пуст.</p>}
+  <ul class="archive-grid">
+    {items.map((it) => (
+      <li class="archive-cell">
+        <a href={`${baseHref}/${it.date}`}>
+          {it.kind === 'fish' && it.svg && (
+            <Fragment set:html={it.svg.replace('<svg ', '<svg class="archive-thumb" ')} />
+          )}
+          {it.kind === 'empty' && (
+            <div class="archive-cell-empty">— без рыбы —</div>
+          )}
+          <div class="cell-meta">
+            <div>{it.date}</div>
+            <div class="cell-word">{it.word}</div>
+          </div>
+        </a>
+      </li>
+    ))}
+  </ul>
+</Default>

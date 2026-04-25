@@ -1,0 +1,39 @@
+---
+interface Stage1 {
+  word: string;
+  language: string;
+  transliteration: string | null;
+  russian_meaning: string;
+}
+interface Stage2 { description: string; }
+interface Stage3 { dsl: any; }
+interface Props { stage1: Stage1; stage2: Stage2; stage3: Stage3; }
+
+const { stage1, stage2, stage3 } = Astro.props;
+
+const wordLine = stage1.transliteration
+  ? `${stage1.word} (${stage1.language.toLowerCase()}: ${stage1.transliteration} — ${stage1.russian_meaning})`
+  : `${stage1.word} (${stage1.language.toLowerCase()}: ${stage1.russian_meaning})`;
+
+const dslLines = (() => {
+  const d = stage3.dsl;
+  const lines: string[] = [];
+  lines.push(`body: ${d.body.primitive} / ${d.body.color} / ${d.body.orientation}`);
+  if (d.head) lines.push(`head: ${d.head.primitive} / ${d.head.color}`);
+  lines.push(`eye: ${d.eye.style} / ${d.eye.position}`);
+  if (d.tail) lines.push(`tail: ${d.tail.primitive} / ${d.tail.color} / ${d.tail.side}`);
+  if (d.fin_top) lines.push(`fin_top: triangle / ${d.fin_top.color} / ${d.fin_top.tilt}`);
+  if (d.fin_bottom) lines.push(`fin_bottom: triangle / ${d.fin_bottom.color} / ${d.fin_bottom.tilt}`);
+  if (d.background_block) {
+    const off = `[${d.background_block.offset[0]}, ${d.background_block.offset[1]}]`;
+    lines.push(`background_block: ${d.background_block.color} / ${d.background_block.size} / ${off}`);
+  }
+  for (const a of d.accents) lines.push(`accent: ${a.type} / ${a.color} / ${a.position}`);
+  return lines.join('\n');
+})();
+---
+<div class="concept-card">
+  <div class="label">Слово</div>  <div class="value">{wordLine}</div>
+  <div class="label">Рыба</div>   <div class="value">{stage2.description}</div>
+  <div class="label">DSL</div>    <div class="value dsl">{dslLines}</div>
+</div>
