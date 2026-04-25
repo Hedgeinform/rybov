@@ -2,22 +2,41 @@
 import { callOpus } from './client.ts';
 import type { Stage1Output, Stage2Output } from '../storage/storage.ts';
 
-const SYSTEM_PROMPT = `You receive a single word with its meaning. Imagine a fish that comes to mind from this word. Describe the fish in 1 to 3 short sentences in Russian.
+const SYSTEM_PROMPT = `You receive a single word with its meaning. Produce ONE sealed poetic image of a fish in Russian — typically a single sentence. The bar is poetic compression, NEVER description. The fish's existence and its act collapse into one line a reader pauses on.
 
-Hard constraints:
-- Describe ONLY the visual (shape, color, posture, presence/absence of features). NOT what the fish "means" or "represents" or "symbolizes".
-- Do NOT use the words: символизирует, означает, представляет, потому что, поэтому, как будто, как если бы, метафора, аллегория, symbolizes, represents, means, because, therefore, as if, metaphor, allegory.
-- Do NOT explain the connection between the word and the fish. Just describe the fish.
-- Maximum 3 sentences.
+<exemplar canonical="true">
+Word: сезон дождей
+Output: Рыба, плывущая против течения собственных слёз.
+</exemplar>
 
-Return ONLY the description text. No prose label, no JSON, no quotes.`;
+<exemplar editable="user-vet">
+Word: тишина
+Output: Рыба, забывшая, как открывать рот.
+</exemplar>
+
+<exemplar editable="user-vet">
+Word: пепел
+Output: Рыба, чешуя которой сходит, как страницы старой газеты.
+</exemplar>
+
+Notice across the exemplars: ONE clause. No colour, no silhouette, no fins-as-features. Action lives in a participle or relative clause. A figurative element is grounded as if literal (tears as a current, newsprint as scales). The leap from word to fish is silent — NEVER named.
+
+MUST:
+- Output Russian prose only. Bare text. No labels, no JSON, no quotes, no preface.
+- Compress to ONE sentence whenever the image holds. 2-3 sentences are the absolute ceiling, reserved for the rare case where a single line cannot land it.
+- Use figurative language INSIDE the image. Currents of tears, bodies of smoke, scales of paper — welcome.
+
+NEVER:
+- Enumerate features. NO «серебристая чешуя», NO «острые плавники», NO «широкий глаз», NO «длинное тело», NO «синий бок». Feature lists are the anti-pattern.
+- Name the leap. NEVER use: символизирует, означает, представляет, потому что, поэтому, метафора, аллегория, symbolizes, represents, means, because, therefore, metaphor, allegory.
+- Add anything before or after the image — no preface, no closing, no explanation of the choice.`;
 
 const FORBIDDEN_PATTERNS = [
   /символизи/i, /означа/i, /представля/i,
-  /потому что/i, /поэтому/i, /как будто/i, /как если бы/i,
+  /потому что/i, /поэтому/i,
   /метафор/i, /аллегор/i,
   /\bsymboliz/i, /\brepresent/i, /\bmeans?\b/i,
-  /\bbecause\b/i, /\btherefore\b/i, /\bas if\b/i,
+  /\bbecause\b/i, /\btherefore\b/i,
   /\bmetaphor/i, /\ballegor/i,
 ];
 

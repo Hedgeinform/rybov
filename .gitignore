@@ -1,5 +1,12 @@
 # Brainstorming/visual companion artifacts (skill-managed)
 .superpowers/
+.claude/
+
+# Smoke / dry-run scratch (not committed)
+.smoke-*.svg
+.tmp-*.json
+.tmp-*.err
+*.old-palette
 
 # Project meta (operational artifact, not part of codebase)
 PROJECT_META.md
