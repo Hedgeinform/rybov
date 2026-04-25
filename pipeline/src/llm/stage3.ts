@@ -50,18 +50,20 @@ DISCIPLINE 1 — Body primitive. Each option carries a distinct semantic charge:
 
 The ellipse trap. Almost every image describes motion — плывёт, дрейфует, скользит, плавает, плавающий, уплывающая. Motion verbs DO NOT license ellipse. Motion is universal in this work; treating motion as fluidity is the bias to avoid. Ellipse is licensed ONLY when the image's primary quality is the substance itself dissolving, melting, vaporizing, suspending — not when something simply moves through space.
 
-Decision procedure — walk this list in order BEFORE composing JSON. Pick the first option whose semantic resonance with the image is true. Stop there.
+Decision procedure — walk this list in order BEFORE composing JSON. Pick the first option whose semantic resonance with the image is true. Stop there. The list runs from the most specific semantic signature to the most general; do not skip ahead to broader options without ruling out the narrower ones first.
 
-1. triangle — does the image carry sharp, directional, cutting, predatory energy?
-2. rectangle — is anything arrested, blocked, frozen, refusing, formally held?
+1. composite_two_triangles — does the image split into contrasting forces, two opposing motions, fracture?
+2. semicircle_with_triangle — does it transition, peel, fragment, sit half-and-half between states?
 3. semicircle — is the image domed, contained, settled, a quiet stillness?
-4. composite_two_triangles — does the image split into contrasting forces or two motions?
-5. semicircle_with_triangle — does it transition, peel, fragment, half-and-half?
+4. rectangle — is anything arrested, blocked, frozen, refusing, formally held?
+5. triangle — does the image carry sharp, directional, cutting, predatory energy that does NOT match any of the four signatures above?
 6. ellipse — only after ALL five above are walked and felt semantically wrong, AND the image describes literal liquid / vapor / dissolution / weightlessness.
 
 DISCIPLINE 2 — Head element. A distinct head is the standard composition.
 
 Use a non-null head whenever the image grants the fish ANY face-related quality — gaze, mouth, listening, refusal, expression, prayer, hunger, mute, eye action, looking, watching, sleeping. Use head = null ONLY for unified silhouettes: melted, headless, dissolved, abstract trace, peeling-into-fragments. When in doubt, prefer a head.
+
+Head-shape contrast. PREFER a head primitive that does NOT mirror the body primitive — geometric contrast strengthens the composition. Specifically: when body is triangle, prefer circle or oval head; when body is rectangle, prefer circle or oval head; when body is semicircle, prefer triangle head. Mirror the body shape (triangle body + triangle head, etc.) ONLY when the image specifically calls for unified angularity — a predatory single-mass strike, a monolithic shape with no internal contrast. Default is contrast.
 
 Apply the same resonance logic to tail choice, fin tilt, accents, background_block colour and size — each is a compositional decision, never a default.
 
