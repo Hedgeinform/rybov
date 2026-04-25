@@ -6,10 +6,10 @@
   "scripts": {
     "test": "vitest",
     "test:run": "vitest run",
-    "verify:openrouter": "node --env-file=../.env src/scripts/verify-openrouter.ts",
-    "dry-run": "node --env-file=../.env src/scripts/dry-run.ts",
-    "daily": "node --env-file=../.env src/scripts/run-daily.ts",
-    "post-tg": "node --env-file=../.env src/scripts/post-tg.ts"
+    "verify:openrouter": "node --env-file-if-exists=../.env src/scripts/verify-openrouter.ts",
+    "dry-run": "node --env-file-if-exists=../.env src/scripts/dry-run.ts",
+    "daily": "node --env-file-if-exists=../.env src/scripts/run-daily.ts",
+    "post-tg": "node --env-file-if-exists=../.env src/scripts/post-tg.ts"
   },
   "dependencies": {
     "zod": "^3.23.0",
