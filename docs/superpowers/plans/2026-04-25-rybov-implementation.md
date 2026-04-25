@@ -2014,9 +2014,13 @@ Set the two boolean constants based on Task 1.1 verification findings.
 const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
 export const MODEL = 'anthropic/claude-opus-4.7';
 
-// Set from docs/notes/openrouter-verification.md findings:
-export const OPENROUTER_REASONING_SUPPORTED = true; // adjust after Task 1.1
-export const OPENROUTER_CACHING_SUPPORTED = true;   // adjust after Task 1.1
+// Set from docs/notes/openrouter-verification.md findings (2026-04-25 run):
+// - reasoning: confirmed NOT pass-through via OpenRouter+Bedrock (probe 2: reasoning_tokens=0)
+// - caching: inconclusive (probe used <1024-token prompt, below Anthropic's cache threshold);
+//   default to true since real Stage 2/3 prompts are >1024 tokens and the directive is
+//   silently ignored if not honoured.
+export const OPENROUTER_REASONING_SUPPORTED = false;
+export const OPENROUTER_CACHING_SUPPORTED = true;
 export const REASONING_EFFORT: 'high' | 'medium' | 'low' | 'minimal' = 'high';
 
 export interface CallOptions {
