@@ -1,0 +1,17 @@
+{
+  "name": "rybov",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.0.0" },
+  "workspaces": ["pipeline", "web"],
+  "scripts": {
+    "test": "npm --workspace pipeline test",
+    "test:run": "npm --workspace pipeline run test:run",
+    "build:web": "npm --workspace web run build",
+    "dev:web": "npm --workspace web run dev",
+    "verify:openrouter": "npm --workspace pipeline run verify:openrouter",
+    "dry-run": "npm --workspace pipeline run dry-run",
+    "daily": "npm --workspace pipeline run daily"
+  }
+}

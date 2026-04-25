@@ -22,3 +22,16 @@ build/
 .next/
 .astro/
 .output/
+
+# Node / npm
+*.log
+.npm/
+
+# TypeScript
+*.tsbuildinfo
+
+# Vitest cache
+.vitest/
+
+# Astro
+web/dist/
