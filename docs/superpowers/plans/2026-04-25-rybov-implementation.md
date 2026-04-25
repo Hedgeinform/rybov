@@ -2318,7 +2318,16 @@ export async function runStage3(stage2: Stage2Output): Promise<Stage3Output> {
       userPrompt = `${baseUserPrompt}\n\nPrevious attempt was not valid JSON. Return ONLY a JSON object.`;
       continue;
     }
-    const result = validate(parsed);
+    // validate() throws on schema-level (Zod) errors but returns {ok:false}
+    // on cross-field constraint failures. Catch the throw so both paths
+    // produce a retry instead of crashing the stage.
+    let result;
+    try { result = validate(parsed); }
+    catch (e) {
+      lastError = `Validator (schema): ${e}`;
+      userPrompt = `${baseUserPrompt}\n\nPrevious attempt was rejected: ${e}\nFix and retry.`;
+      continue;
+    }
     if (result.ok) return { dsl: result.dsl };
     lastError = `Validator: ${result.error}`;
     userPrompt = `${baseUserPrompt}\n\nPrevious attempt was rejected: ${result.error}\nFix and retry.`;
