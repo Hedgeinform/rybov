@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  actions: write   # to trigger Deploy web after the fish push
 
 jobs:
   generate:
@@ -39,3 +40,11 @@ jobs:
           RYBOV_SITE_URL: ${{ vars.RYBOV_SITE_URL }}
           RYBOV_BASE_PATH: ${{ vars.RYBOV_BASE_PATH }}
         run: npm run post-tg
+      - name: Trigger web deploy
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # Pushes made by GITHUB_TOKEN don't trigger downstream workflows
+        # (anti-recursion safety). workflow_dispatch via gh CLI bypasses
+        # this — explicit API call counts as a separate event.
+        run: gh workflow run deploy-web.yml --ref master
