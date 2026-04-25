@@ -1,0 +1,41 @@
+name: Daily fish
+
+on:
+  schedule:
+    # 00:05 UTC every day (5-min buffer past midnight to avoid rate-limit edges)
+    - cron: '5 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - run: npm ci
+      - name: Run daily fish
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: npm run daily
+      - name: Commit + push
+        run: |
+          git config user.name "rybov-bot"
+          git config user.email "rybov-bot@users.noreply.github.com"
+          git add fish/
+          git diff --staged --quiet || git commit -m "fish: $(date -u +%Y-%m-%d)"
+          git push
+      - name: Post to Telegram
+        if: success()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+          RYBOV_SITE_URL: ${{ vars.RYBOV_SITE_URL }}
+          RYBOV_BASE_PATH: ${{ vars.RYBOV_BASE_PATH }}
+        run: npm run post-tg

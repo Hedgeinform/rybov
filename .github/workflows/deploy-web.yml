@@ -1,0 +1,45 @@
+name: Deploy web
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'fish/**'
+      - 'web/**'
+      - 'design-system/**'
+      - 'package.json'
+      - 'package-lock.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - run: npm ci
+      - name: Build Astro
+        env:
+          RYBOV_SITE_URL: ${{ vars.RYBOV_SITE_URL || 'https://hedgeinform.github.io' }}
+          RYBOV_BASE_PATH: ${{ vars.RYBOV_BASE_PATH || '/rybov' }}
+        run: npm run build:web
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+      - id: deployment
+        uses: actions/deploy-pages@v4

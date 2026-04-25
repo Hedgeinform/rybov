@@ -25,8 +25,8 @@ if (!botToken || !channelId) {
 
 const result = await readFish(FISH_DIR, date);
 if (!result) {
-  console.error(`No fish for ${date}`);
-  process.exit(1);
+  console.log(`No fish for ${date} (likely empty-day); skipping TG post.`);
+  process.exit(0);
 }
 
 const png = await svgToPng(result.svg);
