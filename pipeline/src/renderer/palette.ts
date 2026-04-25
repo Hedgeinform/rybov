@@ -1,14 +1,14 @@
 import type { Color } from '../dsl/schema.ts';
 
 const PALETTE: Record<Color, string> = {
-  red: '#D32F2F',
-  blue: '#1E5BCC',
-  yellow: '#F5C518',
+  red: '#A02C5B',
+  blue: '#3D2E8C',
+  yellow: '#C8A435',
   black: '#111111',
   white: '#FAFAFA',
-  accent_cyan: '#2A9DC9',
-  accent_ochre: '#B8862E',
-  accent_deep_red: '#8A1F1F',
+  accent_cyan: '#2E8B7F',
+  accent_ochre: '#6B7A2F',
+  accent_deep_red: '#5D2A6E',
 };
 
 export function hex(c: Color): string {
