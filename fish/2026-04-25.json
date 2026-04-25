@@ -1,0 +1,66 @@
+{
+  "date": "2026-04-25",
+  "stage1": {
+    "word": "छाया",
+    "language": "Hindi",
+    "transliteration": "chhaya",
+    "russian_meaning": "тень"
+  },
+  "stage2": {
+    "description": "Рыба, отбрасывающая воду вместо света."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "triangle",
+        "orientation": "left",
+        "color": "black"
+      },
+      "head": {
+        "primitive": "triangle",
+        "color": "black"
+      },
+      "eye": {
+        "style": "double_circle",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "fork",
+        "color": "accent_cyan",
+        "side": "right"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "accent_cyan",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "yellow",
+        "size": "large",
+        "offset": [
+          15,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "accent_cyan",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "triangle",
+    "body_color": "black",
+    "head_primitive": "triangle",
+    "has_bg_block": true,
+    "bg_color": "yellow",
+    "has_tail": true,
+    "tail_primitive": "fork"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
