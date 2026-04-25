@@ -1,0 +1,22 @@
+{
+  "name": "@rybov/pipeline",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "test:run": "vitest run",
+    "verify:openrouter": "node --env-file=../.env src/scripts/verify-openrouter.ts",
+    "dry-run": "node --env-file=../.env src/scripts/dry-run.ts",
+    "daily": "node --env-file=../.env src/scripts/run-daily.ts"
+  },
+  "dependencies": {
+    "zod": "^3.23.0",
+    "@resvg/resvg-js": "^2.6.0"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  }
+}
