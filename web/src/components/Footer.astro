@@ -1,0 +1,39 @@
+---
+const year = new Date().getUTCFullYear();
+---
+<style>
+  .rybov-footer {
+    background: var(--bg);
+    color: var(--ink-soft);
+    padding: 64px 0 40px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .rybov-footer-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .rybov-footer a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .rybov-footer a:hover { color: var(--accent); }
+  .rybov-footer .secondary { color: var(--ink-faint); }
+</style>
+
+<footer class="rybov-footer">
+  <div class="rybov-footer-inner">
+    <span>Rybov · одна рыба в день</span>
+    <a href="https://github.com/Hedgeinform/rybov">GitHub →</a>
+    <span class="secondary">© {year} · all rights reserved</span>
+  </div>
+</footer>

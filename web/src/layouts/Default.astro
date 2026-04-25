@@ -1,4 +1,6 @@
 ---
+import Topbar from '../components/Topbar.astro';
+import Footer from '../components/Footer.astro';
 interface Props {
   title: string;
   description?: string;
@@ -6,6 +8,8 @@ interface Props {
 }
 const { title, description, ogImage } = Astro.props;
 const baseHref = (import.meta.env.BASE_URL ?? '/').replace(/\/$/, '');
+const todayHref = `${baseHref}/`;
+const archiveHref = `${baseHref}/archive`;
 ---
 <!doctype html>
 <html lang="ru" data-theme="dark">
@@ -137,8 +141,10 @@ const baseHref = (import.meta.env.BASE_URL ?? '/').replace(/\/$/, '');
     </style>
   </head>
   <body>
+    <Topbar todayHref={todayHref} archiveHref={archiveHref} />
     <div class="page">
       <slot />
     </div>
+    <Footer />
   </body>
 </html>
