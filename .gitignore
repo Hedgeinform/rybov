@@ -1,0 +1,24 @@
+# Brainstorming/visual companion artifacts (skill-managed)
+.superpowers/
+
+# Project meta (operational artifact, not part of codebase)
+PROJECT_META.md
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Common runtime/dependency dirs (preemptive — stack chosen later)
+node_modules/
+__pycache__/
+*.pyc
+.env
+.env.local
+.env.*.local
+dist/
+build/
+.next/
+.astro/
+.output/
