@@ -45,7 +45,6 @@ describe('validate', () => {
   it('rejects background_block with non-palette color (handled by zod up-stream)', () => {
     expect(() => validate({
       ...baseFish,
-      // @ts-expect-error invalid color
       background_block: { color: 'fuchsia', size: 'small', offset: [0, 0] },
     })).toThrow();
   });
