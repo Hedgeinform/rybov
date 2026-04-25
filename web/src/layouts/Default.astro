@@ -1,0 +1,144 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+const { title, description, ogImage } = Astro.props;
+const baseHref = (import.meta.env.BASE_URL ?? '/').replace(/\/$/, '');
+---
+<!doctype html>
+<html lang="ru" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    <link rel="stylesheet" href={`${baseHref}/arkadiy-ds/tokens.css`} />
+    <link rel="stylesheet" href={`${baseHref}/arkadiy-ds/typography.css`} />
+    <style is:global>
+      body {
+        background: var(--bg);
+        color: var(--ink);
+        font-family: var(--font-body);
+        font-size: var(--body-size, 17px);
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+      }
+      .page {
+        max-width: var(--max-width, 1320px);
+        margin: 0 auto;
+        padding: 0 var(--gutter, 64px);
+      }
+
+      /* Hosted-artefact frame per DS v0.6 §3a — DS owns the wrapper,
+         the fish owns its interior. Hairline border, DS tokens only,
+         no surface tinting to match the artefact. */
+      figure.fish-figure {
+        border: 1px solid var(--rule);
+        background: transparent;
+        margin: var(--section-pad, 96px) auto;
+        padding: 0;
+        max-width: min(100%, 600px);
+      }
+      figure.fish-figure svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .fig-label {
+        font-family: var(--font-mono);
+        font-size: var(--meta-size, 11px);
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin: 8px 0;
+      }
+
+      /* Concept card — DS body type, mono labels per §2 */
+      .concept-card {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        gap: 8px 16px;
+        margin-top: 16px;
+      }
+      .concept-card .label {
+        font-family: var(--font-mono);
+        font-size: var(--meta-size, 11px);
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+      }
+      .concept-card .value { color: var(--ink); }
+      .concept-card .dsl {
+        font-family: var(--font-mono);
+        font-size: 14px;
+        white-space: pre-wrap;
+      }
+
+      /* Archive contact sheet per §3a end note —
+         «when the artefact IS the page, regular grid bounded by
+         gutter and --rule hairlines, captions per cell». */
+      .archive-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 24px;
+        margin: var(--section-pad, 96px) 0;
+        padding: 0;
+        list-style: none;
+      }
+      .archive-cell {
+        border: 1px solid var(--rule);
+        padding: 0;
+      }
+      .archive-cell a {
+        display: block;
+        color: var(--ink);
+        text-decoration: none;
+      }
+      .archive-cell a:hover { background: var(--bg-elev); }
+      .archive-cell .archive-thumb {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid var(--rule);
+      }
+      .archive-cell-empty {
+        aspect-ratio: 200 / 140;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-mono);
+        font-size: var(--meta-size, 11px);
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        border-bottom: 1px solid var(--rule);
+      }
+      .archive-cell .cell-meta {
+        padding: 10px 12px;
+        font-family: var(--font-mono);
+        font-size: var(--meta-size, 11px);
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+      }
+      .archive-cell .cell-word {
+        margin-top: 4px;
+        font-family: var(--font-body);
+        font-size: 14px;
+        text-transform: none;
+        letter-spacing: 0;
+        color: var(--ink);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <slot />
+    </div>
+  </body>
+</html>
