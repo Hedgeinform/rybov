@@ -33,5 +33,5 @@ export function render(dsl: DSL): string {
     bodyOrientation: dsl.body.orientation,
   }));
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VIEWBOX.w} ${VIEWBOX.h}" width="${VIEWBOX.w}" height="${VIEWBOX.h}">${parts.join('')}</svg>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VIEWBOX.w} ${VIEWBOX.h}">${parts.join('')}</svg>`;
 }
