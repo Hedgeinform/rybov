@@ -21,6 +21,7 @@ const { date } = Astro.params;
 <Default
   title={fish ? `${date} · ${fish.record.stage1.word} — Rybov` : `${date} — Rybov`}
   description={fish ? fish.record.stage2.description.slice(0, 200) : undefined}
+  metaAnchor={`FIG. ${date}`}
 >
   {fish && (
     <Fragment>

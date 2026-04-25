@@ -9,6 +9,7 @@ const latest = await loadLatest();
 <Default
   title={latest && latest.kind === 'fish' ? `${latest.data.date} · ${latest.data.record.stage1.word} — Rybov` : 'Rybov'}
   description={latest && latest.kind === 'fish' ? latest.data.record.stage2.description.slice(0, 200) : 'One concept-art fish per day.'}
+  metaAnchor={latest ? `FIG. ${latest.data.date}` : undefined}
 >
   {latest === null && <p>Сегодня пока без рыбы.</p>}
   {latest && latest.kind === 'empty' && (

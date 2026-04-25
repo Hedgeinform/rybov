@@ -5,8 +5,9 @@ interface Props {
   title: string;
   description?: string;
   ogImage?: string;
+  metaAnchor?: string;
 }
-const { title, description, ogImage } = Astro.props;
+const { title, description, ogImage, metaAnchor } = Astro.props;
 const baseHref = (import.meta.env.BASE_URL ?? '/').replace(/\/$/, '');
 const todayHref = `${baseHref}/`;
 const archiveHref = `${baseHref}/archive`;
@@ -141,7 +142,7 @@ const archiveHref = `${baseHref}/archive`;
     </style>
   </head>
   <body>
-    <Topbar todayHref={todayHref} archiveHref={archiveHref} />
+    <Topbar todayHref={todayHref} archiveHref={archiveHref} metaAnchor={metaAnchor} />
     <div class="page">
       <slot />
     </div>

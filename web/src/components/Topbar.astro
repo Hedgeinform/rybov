@@ -1,9 +1,15 @@
 ---
+// Source: design-system/arkadiy-ds/components/topbar.html (v0.7)
+// {{META_ANCHOR}} → metaAnchor prop (FIG. <date> on fish pages, empty on archive → compact-mode fallback per §8.3)
+// {{NAME}} · {{TAGLINE}} → "Rybov · одна рыба в день"
+// {{NAV_LABEL}} → "Архив"
+// href="#euler" → todayHref (Euler doubles as home link; monogram is decorative per v0.7)
 interface Props {
   todayHref: string;
   archiveHref: string;
+  metaAnchor?: string;
 }
-const { todayHref, archiveHref } = Astro.props;
+const { todayHref, archiveHref, metaAnchor = '' } = Astro.props;
 ---
 <style>
   .ads-topbar {
@@ -14,6 +20,7 @@ const { todayHref, archiveHref } = Astro.props;
     color: var(--ink-soft);
     transition: background 300ms ease, border-color 300ms ease, color 300ms ease;
   }
+
   .ads-topbar-inner {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -25,9 +32,12 @@ const { todayHref, archiveHref } = Astro.props;
   }
   .ads-topbar-left  {
     display: flex; align-items: center; gap: 14px;
-    text-align: left;
+    text-align: left; min-width: 0;
   }
   .ads-topbar-left .sep { color: var(--ink-faint); }
+  .ads-topbar-left .ads-topbar-tagline {
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
   .ads-topbar-right { display: flex; justify-content: flex-end; align-items: center; gap: 18px; }
   .ads-topbar-right a { color: var(--ink); text-decoration: none; }
 
@@ -35,6 +45,7 @@ const { todayHref, archiveHref } = Astro.props;
     display: inline-flex; align-items: center;
     color: var(--accent);
     transition: color 300ms ease;
+    flex: 0 0 auto;
   }
   .ads-topbar-monogram svg { display: block; }
 
@@ -43,7 +54,7 @@ const { todayHref, archiveHref } = Astro.props;
     font-style: italic; font-size: 17px; letter-spacing: 0.3px;
     text-transform: none; line-height: 1; white-space: nowrap;
     text-decoration: none; color: var(--accent);
-    transition: color 300ms ease;
+    transition: color 300ms ease, font-size 200ms ease;
   }
   .ads-topbar-euler sup { font-style: italic; font-size: 0.7em; }
 
@@ -61,21 +72,69 @@ const { todayHref, archiveHref } = Astro.props;
     width: 8px; height: 8px; border-radius: 50%;
     background: var(--accent);
   }
+
+  .ads-topbar-epigraph {
+    display: none;
+    padding: 5px var(--gutter) 4px;
+    border-bottom: 1px solid var(--rule);
+    justify-content: space-between; align-items: baseline;
+    font-family: var(--font-mono); font-size: 9.5px;
+    letter-spacing: 1px; text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .ads-topbar-epigraph .meta-anchor { color: var(--ink-faint); }
+  .ads-topbar-epigraph .ads-topbar-euler {
+    font-size: 11px; letter-spacing: 0;
+  }
+
+  @media (max-width: 640px) {
+    .ads-topbar-inner {
+      padding: 10px var(--gutter);
+      grid-template-columns: 1fr auto;
+    }
+    .ads-topbar-inner > .ads-topbar-euler { display: none; }
+
+    .ads-topbar-epigraph { display: flex; }
+
+    .ads-topbar:not(:has(.ads-topbar-epigraph .meta-anchor:not(:empty))) .ads-topbar-epigraph {
+      display: none;
+    }
+    .ads-topbar:not(:has(.ads-topbar-epigraph .meta-anchor:not(:empty))) .ads-topbar-inner {
+      grid-template-columns: auto 1fr auto;
+    }
+    .ads-topbar:not(:has(.ads-topbar-epigraph .meta-anchor:not(:empty))) .ads-topbar-inner > .ads-topbar-euler {
+      display: inline; justify-self: center; font-size: 15px;
+    }
+
+    .ads-topbar-left .ads-topbar-tagline {
+      max-width: 22ch;
+    }
+
+    .ads-theme-toggle .label { display: none; }
+    .ads-theme-toggle { padding: 5px; }
+  }
 </style>
 
 <div class="ads-topbar">
+  <div class="ads-topbar-epigraph">
+    <span class="meta-anchor">{metaAnchor}</span>
+    <a href={todayHref} class="ads-topbar-euler" title="Euler's identity — the standard this practice is held to.">
+      e<sup>i&pi;</sup> + 1 = 0
+    </a>
+  </div>
+
   <div class="ads-topbar-inner">
     <span class="ads-topbar-left">
-      <a href={todayHref} class="ads-topbar-monogram" aria-label="Rybov · home">
+      <span class="ads-topbar-monogram" aria-label="AS">
         <svg viewBox="0 0 28 28" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4">
           <g transform="skewX(-8)">
             <path d="M 3 24 L 11 4 L 19 24 M 6 17 L 16 17"/>
             <path d="M 25 8 Q 25 4 20 4 Q 15 4 15 8 Q 15 12 20 13 Q 25 14 25 19 Q 25 24 20 24 Q 15 24 15 20"/>
           </g>
         </svg>
-      </a>
+      </span>
       <span class="sep">·</span>
-      <span>Rybov · одна рыба в день</span>
+      <span class="ads-topbar-tagline">Rybov · одна рыба в день</span>
     </span>
 
     <a href={todayHref} class="ads-topbar-euler"
@@ -84,7 +143,7 @@ const { todayHref, archiveHref } = Astro.props;
     </a>
 
     <span class="ads-topbar-right">
-      <a href={archiveHref}>Архив</a>
+      <a href={archiveHref} aria-label="Архив">Архив</a>
       <button class="ads-theme-toggle" id="theme-toggle" aria-label="Toggle theme">
         <span class="dot"></span>
         <span class="label">Dark</span>
