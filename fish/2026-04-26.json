@@ -1,0 +1,75 @@
+{
+  "date": "2026-04-26",
+  "stage1": {
+    "word": "щекотать",
+    "language": "Russian",
+    "transliteration": "shchekotat'",
+    "russian_meaning": "щекотать, вызывать зуд прикосновением"
+  },
+  "stage2": {
+    "description": "Рыба, проплывающая пальцами по рёбрам воды."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "composite_two_triangles",
+        "orientation": "right",
+        "color": "blue"
+      },
+      "head": {
+        "primitive": "oval",
+        "color": "blue"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "fork",
+        "color": "accent_cyan",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "accent_cyan",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": {
+        "primitive": "triangle",
+        "color": "accent_cyan",
+        "tilt": "tilted_backward"
+      },
+      "background_block": {
+        "color": "white",
+        "size": "medium",
+        "offset": [
+          15,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "accent_cyan",
+          "position": "midline"
+        },
+        {
+          "type": "horizontal_line",
+          "color": "accent_cyan",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "composite_two_triangles",
+    "body_color": "blue",
+    "head_primitive": "oval",
+    "has_bg_block": true,
+    "bg_color": "white",
+    "has_tail": true,
+    "tail_primitive": "fork"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
