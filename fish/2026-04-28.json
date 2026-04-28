@@ -1,0 +1,66 @@
+{
+  "date": "2026-04-28",
+  "stage1": {
+    "word": "遲到",
+    "language": "Chinese",
+    "transliteration": "chídào",
+    "russian_meaning": "опаздывать"
+  },
+  "stage2": {
+    "description": "Рыба, доплывающая до берега, с которого уже ушло море."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle_with_triangle",
+        "orientation": "right",
+        "color": "accent_ochre"
+      },
+      "head": {
+        "primitive": "oval",
+        "color": "accent_ochre"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "triangle",
+        "color": "accent_deep_red",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "yellow",
+        "size": "large",
+        "offset": [
+          15,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "black",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle_with_triangle",
+    "body_color": "accent_ochre",
+    "head_primitive": "oval",
+    "has_bg_block": true,
+    "bg_color": "yellow",
+    "has_tail": true,
+    "tail_primitive": "triangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
