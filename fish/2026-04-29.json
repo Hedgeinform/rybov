@@ -1,0 +1,75 @@
+{
+  "date": "2026-04-29",
+  "stage1": {
+    "word": "مفتاح",
+    "language": "Arabic",
+    "transliteration": "miftāḥ",
+    "russian_meaning": "ключ"
+  },
+  "stage2": {
+    "description": "Рыба, в чьей чешуе спит замок, ждущий прикосновения её плавника."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "rectangle",
+        "orientation": "right",
+        "color": "accent_deep_red"
+      },
+      "head": {
+        "primitive": "circle",
+        "color": "accent_ochre"
+      },
+      "eye": {
+        "style": "double_circle",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "fork",
+        "color": "accent_deep_red",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "perpendicular"
+      },
+      "fin_bottom": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "tilted_forward"
+      },
+      "background_block": {
+        "color": "yellow",
+        "size": "medium",
+        "offset": [
+          -15,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "small_square",
+          "color": "black",
+          "position": "midline"
+        },
+        {
+          "type": "dot",
+          "color": "accent_ochre",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "rectangle",
+    "body_color": "accent_deep_red",
+    "head_primitive": "circle",
+    "has_bg_block": true,
+    "bg_color": "yellow",
+    "has_tail": true,
+    "tail_primitive": "fork"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
