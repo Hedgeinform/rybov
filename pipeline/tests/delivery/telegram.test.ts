@@ -6,6 +6,7 @@ describe('buildCaption', () => {
     date: '2026-04-25',
     word: 'мост',
     language: 'Russian',
+    transliteration: 'most',
     meaning: 'мост',
     description: 'Рыба-мост между двумя берегами одного течения.',
     permalinkUrl: 'https://hedgeinform.example/rybov_show/2026-04-25',
@@ -32,6 +33,29 @@ describe('buildCaption', () => {
 
   it('lowercases language label', () => {
     const cap = buildCaption({ ...base, language: 'Russian' });
-    expect(cap).toContain('(russian:');
+    expect(cap).toContain('(russian,');
+  });
+
+  it('includes transliteration when present', () => {
+    const cap = buildCaption({
+      ...base,
+      word: 'छाया',
+      language: 'Hindi',
+      transliteration: 'chhaya',
+      meaning: 'тень',
+    });
+    expect(cap).toContain('छाया (hindi, chhaya: тень)');
+  });
+
+  it('omits transliteration when null (Latin-script word)', () => {
+    const cap = buildCaption({
+      ...base,
+      word: 'saudade',
+      language: 'Portuguese',
+      transliteration: null,
+      meaning: 'светлая тоска',
+    });
+    expect(cap).toContain('saudade (portuguese: светлая тоска)');
+    expect(cap).not.toContain(', null:');
   });
 });

@@ -34,6 +34,7 @@ const caption = buildCaption({
   date,
   word: result.record.stage1.word,
   language: result.record.stage1.language,
+  transliteration: result.record.stage1.transliteration,
   meaning: result.record.stage1.russian_meaning,
   description: result.record.stage2.description,
   permalinkUrl: `${baseUrl}/${date}`,

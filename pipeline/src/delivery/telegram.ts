@@ -26,17 +26,21 @@ export function buildCaption(args: {
   date: string;
   word: string;
   language: string;
+  transliteration: string | null;
   meaning: string;
   description: string;
   permalinkUrl: string;
 }): string {
-  const { date, word, language, meaning, description, permalinkUrl } = args;
+  const { date, word, language, transliteration, meaning, description, permalinkUrl } = args;
   const esc = (s: string) =>
     s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const langPart = transliteration
+    ? `${esc(language.toLowerCase())}, ${esc(transliteration)}: ${esc(meaning)}`
+    : `${esc(language.toLowerCase())}: ${esc(meaning)}`;
   return [
     `<b>FIG. ${esc(date)}</b>`,
     '',
-    `<b>Слово</b>: ${esc(word)} (${esc(language.toLowerCase())}: ${esc(meaning)})`,
+    `<b>Слово</b>: ${esc(word)} (${langPart})`,
     `<b>Рыба</b>: ${esc(description)}`,
     '',
     `<a href="${esc(permalinkUrl)}">${esc(permalinkUrl)}</a>`,
