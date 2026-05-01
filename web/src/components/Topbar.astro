@@ -46,6 +46,7 @@ const { todayHref, archiveHref, metaAnchor = '' } = Astro.props;
     color: var(--accent);
     transition: color 300ms ease;
     flex: 0 0 auto;
+    text-decoration: none;
   }
   .ads-topbar-monogram svg { display: block; }
 
@@ -118,26 +119,26 @@ const { todayHref, archiveHref, metaAnchor = '' } = Astro.props;
 <div class="ads-topbar">
   <div class="ads-topbar-epigraph">
     <span class="meta-anchor">{metaAnchor}</span>
-    <a href={todayHref} class="ads-topbar-euler" title="Euler's identity — the standard this practice is held to.">
+    <a href={archiveHref} class="ads-topbar-euler" title="Euler's identity — the standard this practice is held to.">
       e<sup>i&pi;</sup> + 1 = 0
     </a>
   </div>
 
   <div class="ads-topbar-inner">
     <span class="ads-topbar-left">
-      <span class="ads-topbar-monogram" aria-label="AS">
+      <a href="https://t.me/chaos_system_ark" class="ads-topbar-monogram" aria-label="Telegram канал автора" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 28 28" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4">
           <g transform="skewX(-8)">
             <path d="M 3 24 L 11 4 L 19 24 M 6 17 L 16 17"/>
             <path d="M 25 8 Q 25 4 20 4 Q 15 4 15 8 Q 15 12 20 13 Q 25 14 25 19 Q 25 24 20 24 Q 15 24 15 20"/>
           </g>
         </svg>
-      </span>
+      </a>
       <span class="sep">·</span>
       <span class="ads-topbar-tagline">Rybov · рыбы для выдр</span>
     </span>
 
-    <a href={todayHref} class="ads-topbar-euler"
+    <a href={archiveHref} class="ads-topbar-euler"
        title="Euler's identity — the standard this practice is held to.">
       e<sup>i&pi;</sup> + 1 = 0
     </a>
