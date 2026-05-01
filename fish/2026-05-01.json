@@ -1,0 +1,71 @@
+{
+  "date": "2026-05-01",
+  "stage1": {
+    "word": "ἄγγελος",
+    "language": "Ancient Greek",
+    "transliteration": "angelos",
+    "russian_meaning": "вестник, гонец"
+  },
+  "stage2": {
+    "description": "Рыба, приплывшая с письмом, которого нельзя прочесть под водой."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "rectangle",
+        "orientation": "right",
+        "color": "accent_ochre"
+      },
+      "head": {
+        "primitive": "circle",
+        "color": "black"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "fork",
+        "color": "accent_ochre",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "perpendicular"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "blue",
+        "size": "large",
+        "offset": [
+          0,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "small_square",
+          "color": "white",
+          "position": "midline"
+        },
+        {
+          "type": "horizontal_line",
+          "color": "white",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "rectangle",
+    "body_color": "accent_ochre",
+    "head_primitive": "circle",
+    "has_bg_block": true,
+    "bg_color": "blue",
+    "has_tail": true,
+    "tail_primitive": "fork"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
