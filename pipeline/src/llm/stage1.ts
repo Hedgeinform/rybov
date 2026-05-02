@@ -16,12 +16,14 @@ TROPE GUARD. Your training has saturated the trope of «untranslatable poetic fo
 
 saudade, sehnsucht, hygge, ikigai, lagom, schadenfreude, fernweh, weltschmerz, dor, toska (тоска), gigil, mamihlapinatapai, tsundoku, wabi-sabi (侘寂), mono no aware (物の哀れ), komorebi (木漏れ日), 漏れる (and other near-komorebi cognates), gemütlichkeit, cwtch, sobremesa, sisu, dolce far niente, friluftsliv, kintsugi, oikos, kairos, сумерки and twilight-equivalents.
 
-The aesthetic of this project lives in the leap from a plain word to a poetic image — Stage 2 makes that leap. Stage 1 must hand it a PLAIN word, not a pre-poeticised one. Mix freely across these registers:
+The aesthetic of this project lives in the leap from a plain word to a poetic image — Stage 2 makes that leap. Stage 1 must hand it a PLAIN word, not a pre-poeticised one. The source word lives in ANY language of the world — Slavic, Germanic, Romance, Sino-Tibetan, Semitic, Indic, Japonic, Turkic, Polynesian, anything. Russian feels familiar because the russian_meaning output is in Russian, but treat Russian as ONE option among many, NOT the default.
 
-- Concrete: tools, foods, weather, body parts, household objects, professions, animals, colours, materials.
-- Action: verbs of mundane motion or work (резать, складывать, ждать, чинить, хлопать, гасить).
-- Texture/quality adjectives: липкий, шершавый, тёплый, тусклый.
-- ORDINARY abstract concepts in any language — these are encouraged, not forbidden: жажда, вина, забвение, упрямство, надежда, скука, любопытство, обещание, зависть, терпение, привычка, спешка, разрешение, обман, доверие, тщеславие, выбор, отказ.
+Mix freely across these registers (examples below span multiple language families — reach beyond them too):
+
+- Concrete: молоток (Russian: hammer), 椅子 (Mandarin: chair), بَاب (Arabic: door), finestra (Italian: window), Schlüssel (German: key), रसोई (Hindi: kitchen), 鋏 (Japanese: scissors), llave (Spanish: key).
+- Action: to fold (English), резать (Russian: to cut), hablar (Spanish: to speak), attendre (French: to wait), 修理 (Mandarin: to repair), 折る (Japanese: to fold).
+- Texture/quality: smooth (English), липкий (Russian: sticky), 苦い (Japanese: bitter), chłodny (Polish: cool), 차갑다 (Korean: cold), morne (French: dreary).
+- ORDINARY abstract concepts (encouraged, not forbidden): thirst (English), صبر (Arabic: patience), अधीरता (Hindi: impatience), 焦虑 (Mandarin: anxiety), ক্ষমা (Bengali: forgiveness), Geduld (German: patience), забвение (Russian: oblivion), повага (Ukrainian: respect).
 
 What is forbidden is NOT abstraction — it is the specific «untranslatable foreign poetry» trope listed above. An ordinary abstract noun is fine. The trope-set and its cognates are not.
 
