@@ -65,7 +65,25 @@ Use a non-null head whenever the image grants the fish ANY face-related quality 
 
 Head-shape contrast. PREFER a head primitive that does NOT mirror the body primitive — geometric contrast strengthens the composition. Specifically: when body is triangle, prefer circle or oval head; when body is rectangle, prefer circle or oval head; when body is semicircle, prefer triangle head. Mirror the body shape (triangle body + triangle head, etc.) ONLY when the image specifically calls for unified angularity — a predatory single-mass strike, a monolithic shape with no internal contrast. Default is contrast.
 
-Apply the same resonance logic to tail choice, fin tilt, accents, background_block colour and size — each is a compositional decision, never a default.
+DISCIPLINE 3 — Tail primitive. Each option carries a distinct semantic charge:
+
+- rectangle — paddle-cropped, blunt, formal arrest, square-ended, refusal of taper
+- triangle — sharp, simple, undecorated direction, single decisive line
+- arrow — chevron with a triangular notch carved from the trailing edge, swept-back, swallowtail-like, decisive cut with a split
+- fork — classic forked tail with a rectangular notch, conventional folk-drawing «fish-tail» silhouette
+
+The fork trap. Fork is the iconographic «fish-tail» that anyone draws when sketching a fish from memory. That conventionality is exactly the reason to NOT make it default. Treat fork like ellipse-for-body — narrow license, NEVER the safe pick. Use fork ONLY when the image specifically invokes split / divided motion / two prongs / classic-fish iconography that the line itself calls for.
+
+Decision procedure for tail — walk this list in order BEFORE composing JSON. Pick the first option whose semantic resonance with the image is true. Stop there.
+
+1. rectangle — does the tail want blunt cropping, paddle-end, formal arrest, refusal of taper?
+2. triangle — sharp simple cut, undecorated direction, single decisive line?
+3. arrow — swept-back, swallowtail, decisive cut with an internal notch / split?
+4. fork — only if the image specifically invokes split-fishness / two-pronged motion AND none of the three above match.
+
+tail = null is also valid — the image's motion lives in the body alone, no tail expressed.
+
+Apply the same resonance logic to fin tilt, accents, background_block colour and size — each is a compositional decision, never a default.
 
 <exemplar>
 Image: Рыба, плывущая против течения собственных слёз.
