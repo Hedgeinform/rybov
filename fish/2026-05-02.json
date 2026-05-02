@@ -1,0 +1,75 @@
+{
+  "date": "2026-05-02",
+  "stage1": {
+    "word": "штопать",
+    "language": "Russian",
+    "transliteration": "shtopat'",
+    "russian_meaning": "зашивать дыры в ткани иглой, восстанавливая переплетение нитей"
+  },
+  "stage2": {
+    "description": "Рыба, чья чешуя держится на стежках из собственного позвоночника."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "rectangle",
+        "orientation": "right",
+        "color": "accent_deep_red"
+      },
+      "head": {
+        "primitive": "circle",
+        "color": "accent_deep_red"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "fork",
+        "color": "accent_deep_red",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "perpendicular"
+      },
+      "fin_bottom": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "perpendicular"
+      },
+      "background_block": {
+        "color": "accent_ochre",
+        "size": "medium",
+        "offset": [
+          0,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "black",
+          "position": "midline"
+        },
+        {
+          "type": "small_square",
+          "color": "black",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "rectangle",
+    "body_color": "accent_deep_red",
+    "head_primitive": "circle",
+    "has_bg_block": true,
+    "bg_color": "accent_ochre",
+    "has_tail": true,
+    "tail_primitive": "fork"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
