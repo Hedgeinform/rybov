@@ -1,0 +1,71 @@
+{
+  "date": "2026-05-03",
+  "stage1": {
+    "word": "mlaskać",
+    "language": "Polish",
+    "transliteration": "mlaskać",
+    "russian_meaning": "чавкать"
+  },
+  "stage2": {
+    "description": "Рыба, чавкающая тишиной, будто пережёвывает собственные пузыри."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle",
+        "orientation": "left",
+        "color": "black"
+      },
+      "head": {
+        "primitive": "circle",
+        "color": "accent_ochre"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "rectangle",
+        "color": "black",
+        "side": "right"
+      },
+      "fin_top": null,
+      "fin_bottom": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "perpendicular"
+      },
+      "background_block": {
+        "color": "yellow",
+        "size": "medium",
+        "offset": [
+          -15,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "dot",
+          "color": "white",
+          "position": "front_center"
+        },
+        {
+          "type": "dot",
+          "color": "white",
+          "position": "midline"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle",
+    "body_color": "black",
+    "head_primitive": "circle",
+    "has_bg_block": true,
+    "bg_color": "yellow",
+    "has_tail": true,
+    "tail_primitive": "rectangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
