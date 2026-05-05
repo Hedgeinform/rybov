@@ -1,0 +1,64 @@
+{
+  "date": "2026-05-05",
+  "stage1": {
+    "word": "tuz",
+    "language": "Turkish",
+    "transliteration": null,
+    "russian_meaning": "соль"
+  },
+  "stage2": {
+    "description": "Рыба, что растворяется в собственном следе, оставляя море чуть горше."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "ellipse",
+        "orientation": "right",
+        "color": "blue"
+      },
+      "head": null,
+      "eye": {
+        "style": "dot",
+        "position": "front_center"
+      },
+      "tail": {
+        "primitive": "triangle",
+        "color": "accent_cyan",
+        "side": "left"
+      },
+      "fin_top": null,
+      "fin_bottom": null,
+      "background_block": {
+        "color": "accent_cyan",
+        "size": "large",
+        "offset": [
+          -15,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_band",
+          "color": "white",
+          "position": "midline"
+        },
+        {
+          "type": "dot",
+          "color": "blue",
+          "position": "tail_side"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "ellipse",
+    "body_color": "blue",
+    "head_primitive": null,
+    "has_bg_block": true,
+    "bg_color": "accent_cyan",
+    "has_tail": true,
+    "tail_primitive": "triangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
