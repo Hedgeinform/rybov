@@ -1,0 +1,71 @@
+{
+  "date": "2026-05-06",
+  "stage1": {
+    "word": "ほうき",
+    "language": "Japanese",
+    "transliteration": "hōki",
+    "russian_meaning": "метла"
+  },
+  "stage2": {
+    "description": "Рыба, метущая хвостом пыль со дна забытых снов."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle",
+        "orientation": "left",
+        "color": "accent_ochre"
+      },
+      "head": {
+        "primitive": "oval",
+        "color": "accent_ochre"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "fork",
+        "color": "accent_deep_red",
+        "side": "right"
+      },
+      "fin_top": null,
+      "fin_bottom": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "tilted_backward"
+      },
+      "background_block": {
+        "color": "black",
+        "size": "large",
+        "offset": [
+          0,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "accent_ochre",
+          "position": "low"
+        },
+        {
+          "type": "dot",
+          "color": "accent_deep_red",
+          "position": "tail_side"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle",
+    "body_color": "accent_ochre",
+    "head_primitive": "oval",
+    "has_bg_block": true,
+    "bg_color": "black",
+    "has_tail": true,
+    "tail_primitive": "fork"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
