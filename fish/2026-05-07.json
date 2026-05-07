@@ -1,0 +1,70 @@
+{
+  "date": "2026-05-07",
+  "stage1": {
+    "word": "kulcsolni",
+    "language": "Hungarian",
+    "transliteration": null,
+    "russian_meaning": "сцеплять, смыкать (например, пальцы)"
+  },
+  "stage2": {
+    "description": "Рыба, чьи плавники сомкнулись, как пальцы в последней молитве."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "rectangle",
+        "orientation": "right",
+        "color": "black"
+      },
+      "head": {
+        "primitive": "oval",
+        "color": "black"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "triangle",
+        "color": "black",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "accent_deep_red",
+        "tilt": "tilted_forward"
+      },
+      "fin_bottom": {
+        "primitive": "triangle",
+        "color": "accent_deep_red",
+        "tilt": "tilted_forward"
+      },
+      "background_block": {
+        "color": "accent_ochre",
+        "size": "large",
+        "offset": [
+          0,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "white",
+          "position": "midline"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "rectangle",
+    "body_color": "black",
+    "head_primitive": "oval",
+    "has_bg_block": true,
+    "bg_color": "accent_ochre",
+    "has_tail": true,
+    "tail_primitive": "triangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
