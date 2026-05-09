@@ -1,0 +1,72 @@
+{
+  "date": "2026-05-09",
+  "stage1": {
+    "word": "sateenkaari",
+    "language": "Finnish",
+    "transliteration": null,
+    "russian_meaning": "радуга"
+  },
+  "stage2": {
+    "description": "Рыба, проплывающая сквозь себя семью преломлениями света."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle_with_triangle",
+        "orientation": "right",
+        "color": "accent_cyan"
+      },
+      "head": null,
+      "eye": {
+        "style": "double_circle",
+        "position": "front_center"
+      },
+      "tail": {
+        "primitive": "arrow",
+        "color": "blue",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "yellow",
+        "tilt": "tilted_forward"
+      },
+      "fin_bottom": {
+        "primitive": "triangle",
+        "color": "yellow",
+        "tilt": "tilted_backward"
+      },
+      "background_block": {
+        "color": "blue",
+        "size": "large",
+        "offset": [
+          15,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_band",
+          "color": "white",
+          "position": "midline"
+        },
+        {
+          "type": "small_square",
+          "color": "yellow",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle_with_triangle",
+    "body_color": "accent_cyan",
+    "head_primitive": null,
+    "has_bg_block": true,
+    "bg_color": "blue",
+    "has_tail": true,
+    "tail_primitive": "arrow"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
