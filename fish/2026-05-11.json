@@ -1,0 +1,71 @@
+{
+  "date": "2026-05-11",
+  "stage1": {
+    "word": "вышивать",
+    "language": "Russian",
+    "transliteration": "vyshivat'",
+    "russian_meaning": "украшать ткань узорами с помощью иглы и нити"
+  },
+  "stage2": {
+    "description": "Рыба, протягивающая сквозь воду нить собственного следа, стежок за стежком сшивая разорванное течение."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "triangle",
+        "orientation": "right",
+        "color": "blue"
+      },
+      "head": {
+        "primitive": "oval",
+        "color": "blue"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "triangle",
+        "color": "accent_cyan",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "accent_ochre",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "accent_cyan",
+        "size": "medium",
+        "offset": [
+          -15,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "accent_ochre",
+          "position": "midline"
+        },
+        {
+          "type": "small_square",
+          "color": "accent_ochre",
+          "position": "tail_side"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "triangle",
+    "body_color": "blue",
+    "head_primitive": "oval",
+    "has_bg_block": true,
+    "bg_color": "accent_cyan",
+    "has_tail": true,
+    "tail_primitive": "triangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
