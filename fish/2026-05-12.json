@@ -1,0 +1,58 @@
+{
+  "date": "2026-05-12",
+  "stage1": {
+    "word": "ぬるい",
+    "language": "Japanese",
+    "transliteration": "nurui",
+    "russian_meaning": "чуть тёплый, тепловатый"
+  },
+  "stage2": {
+    "description": "Рыба, дремлющая в воде температуры собственной крови."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle",
+        "orientation": "right",
+        "color": "accent_deep_red"
+      },
+      "head": {
+        "primitive": "oval",
+        "color": "accent_deep_red"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": null,
+      "fin_top": null,
+      "fin_bottom": null,
+      "background_block": {
+        "color": "red",
+        "size": "large",
+        "offset": [
+          0,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "accent_ochre",
+          "position": "midline"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle",
+    "body_color": "accent_deep_red",
+    "head_primitive": "oval",
+    "has_bg_block": true,
+    "bg_color": "red",
+    "has_tail": false,
+    "tail_primitive": null
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
