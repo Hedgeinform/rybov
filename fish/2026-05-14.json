@@ -1,0 +1,68 @@
+{
+  "date": "2026-05-14",
+  "stage1": {
+    "word": "tört",
+    "language": "Hungarian",
+    "transliteration": null,
+    "russian_meaning": "сломанный, разбитый"
+  },
+  "stage2": {
+    "description": "Рыба, чьё тело — трещина, разбежавшаяся по зеркалу воды."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "composite_two_triangles",
+        "orientation": "right",
+        "color": "black"
+      },
+      "head": null,
+      "eye": {
+        "style": "dot",
+        "position": "front_center"
+      },
+      "tail": {
+        "primitive": "triangle",
+        "color": "black",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "accent_cyan",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "white",
+        "size": "large",
+        "offset": [
+          0,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "accent_cyan",
+          "position": "midline"
+        },
+        {
+          "type": "small_triangle",
+          "color": "black",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "composite_two_triangles",
+    "body_color": "black",
+    "head_primitive": null,
+    "has_bg_block": true,
+    "bg_color": "white",
+    "has_tail": true,
+    "tail_primitive": "triangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
