@@ -1,0 +1,73 @@
+{
+  "date": "2026-05-15",
+  "stage1": {
+    "word": "ferrugem",
+    "language": "Portuguese",
+    "transliteration": null,
+    "russian_meaning": "ржавчина"
+  },
+  "stage2": {
+    "description": "Рыба, чешуя которой осыпается рыжими хлопьями там, где её слишком долго держала вода."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle_with_triangle",
+        "orientation": "left",
+        "color": "accent_ochre"
+      },
+      "head": null,
+      "eye": {
+        "style": "dot",
+        "position": "front_center"
+      },
+      "tail": {
+        "primitive": "arrow",
+        "color": "accent_ochre",
+        "side": "right"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "perpendicular"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "accent_deep_red",
+        "size": "medium",
+        "offset": [
+          15,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "small_square",
+          "color": "accent_ochre",
+          "position": "midline"
+        },
+        {
+          "type": "dot",
+          "color": "black",
+          "position": "low"
+        },
+        {
+          "type": "small_triangle",
+          "color": "accent_ochre",
+          "position": "tail_side"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle_with_triangle",
+    "body_color": "accent_ochre",
+    "head_primitive": null,
+    "has_bg_block": true,
+    "bg_color": "accent_deep_red",
+    "has_tail": true,
+    "tail_primitive": "arrow"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
