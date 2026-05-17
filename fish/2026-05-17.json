@@ -1,0 +1,68 @@
+{
+  "date": "2026-05-17",
+  "stage1": {
+    "word": "kuluttaa",
+    "language": "Finnish",
+    "transliteration": null,
+    "russian_meaning": "изнашивать, расходовать"
+  },
+  "stage2": {
+    "description": "Рыба, истирающая собственную тень о камни течения."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle_with_triangle",
+        "orientation": "right",
+        "color": "black"
+      },
+      "head": null,
+      "eye": {
+        "style": "dot",
+        "position": "front_low"
+      },
+      "tail": {
+        "primitive": "triangle",
+        "color": "accent_ochre",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "accent_ochre",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "accent_ochre",
+        "size": "medium",
+        "offset": [
+          15,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_band",
+          "color": "white",
+          "position": "low"
+        },
+        {
+          "type": "small_square",
+          "color": "black",
+          "position": "midline"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle_with_triangle",
+    "body_color": "black",
+    "head_primitive": null,
+    "has_bg_block": true,
+    "bg_color": "accent_ochre",
+    "has_tail": true,
+    "tail_primitive": "triangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
