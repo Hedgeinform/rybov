@@ -1,0 +1,72 @@
+{
+  "date": "2026-05-19",
+  "stage1": {
+    "word": "tejer",
+    "language": "Spanish",
+    "transliteration": null,
+    "russian_meaning": "вязать (спицами, крючком)"
+  },
+  "stage2": {
+    "description": "Рыба, чьё тело распускается петля за петлёй в чужих руках."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle_with_triangle",
+        "orientation": "left",
+        "color": "accent_deep_red"
+      },
+      "head": null,
+      "eye": {
+        "style": "circle",
+        "position": "front_low"
+      },
+      "tail": {
+        "primitive": "arrow",
+        "color": "accent_ochre",
+        "side": "right"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "tilted_forward"
+      },
+      "background_block": {
+        "color": "accent_ochre",
+        "size": "medium",
+        "offset": [
+          15,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_band",
+          "color": "black",
+          "position": "midline"
+        },
+        {
+          "type": "dot",
+          "color": "black",
+          "position": "tail_side"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle_with_triangle",
+    "body_color": "accent_deep_red",
+    "head_primitive": null,
+    "has_bg_block": true,
+    "bg_color": "accent_ochre",
+    "has_tail": true,
+    "tail_primitive": "arrow"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
