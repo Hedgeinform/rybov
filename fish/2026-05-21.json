@@ -1,0 +1,71 @@
+{
+  "date": "2026-05-21",
+  "stage1": {
+    "word": "σφυρί",
+    "language": "Greek",
+    "transliteration": "sfyrí",
+    "russian_meaning": "молоток"
+  },
+  "stage2": {
+    "description": "Рыба, что носит на лбу наковальню, по которой бьёт каждая встречная волна."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "rectangle",
+        "orientation": "right",
+        "color": "black"
+      },
+      "head": {
+        "primitive": "circle",
+        "color": "black"
+      },
+      "eye": {
+        "style": "square",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "rectangle",
+        "color": "black",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "accent_deep_red",
+        "tilt": "perpendicular"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "accent_ochre",
+        "size": "large",
+        "offset": [
+          15,
+          -15
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_band",
+          "color": "accent_deep_red",
+          "position": "midline"
+        },
+        {
+          "type": "small_square",
+          "color": "black",
+          "position": "front_top"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "rectangle",
+    "body_color": "black",
+    "head_primitive": "circle",
+    "has_bg_block": true,
+    "bg_color": "accent_ochre",
+    "has_tail": true,
+    "tail_primitive": "rectangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
