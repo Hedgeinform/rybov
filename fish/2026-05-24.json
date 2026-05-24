@@ -1,0 +1,71 @@
+{
+  "date": "2026-05-24",
+  "stage1": {
+    "word": "갈증",
+    "language": "Korean",
+    "transliteration": "galjeung",
+    "russian_meaning": "жажда"
+  },
+  "stage2": {
+    "description": "Рыба, пьющая собственное отражение и не находящая дна."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle_with_triangle",
+        "orientation": "right",
+        "color": "blue"
+      },
+      "head": {
+        "primitive": "circle",
+        "color": "accent_cyan"
+      },
+      "eye": {
+        "style": "double_circle",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "arrow",
+        "color": "blue",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "black",
+        "size": "large",
+        "offset": [
+          0,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "accent_cyan",
+          "position": "midline"
+        },
+        {
+          "type": "dot",
+          "color": "accent_cyan",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle_with_triangle",
+    "body_color": "blue",
+    "head_primitive": "circle",
+    "has_bg_block": true,
+    "bg_color": "black",
+    "has_tail": true,
+    "tail_primitive": "arrow"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
