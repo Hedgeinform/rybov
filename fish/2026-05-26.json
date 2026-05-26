@@ -1,0 +1,66 @@
+{
+  "date": "2026-05-26",
+  "stage1": {
+    "word": "ਛਾਂ",
+    "language": "Punjabi",
+    "transliteration": "chhāṁ",
+    "russian_meaning": "тень"
+  },
+  "stage2": {
+    "description": "Рыба, проплывающая под собственным силуэтом, как под чужим деревом."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle",
+        "orientation": "right",
+        "color": "blue"
+      },
+      "head": {
+        "primitive": "oval",
+        "color": "blue"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "triangle",
+        "color": "blue",
+        "side": "left"
+      },
+      "fin_top": null,
+      "fin_bottom": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "tilted_backward"
+      },
+      "background_block": {
+        "color": "black",
+        "size": "large",
+        "offset": [
+          0,
+          -15
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "accent_ochre",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle",
+    "body_color": "blue",
+    "head_primitive": "oval",
+    "has_bg_block": true,
+    "bg_color": "black",
+    "has_tail": true,
+    "tail_primitive": "triangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
