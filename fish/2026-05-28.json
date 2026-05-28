@@ -1,0 +1,66 @@
+{
+  "date": "2026-05-28",
+  "stage1": {
+    "word": "þvo",
+    "language": "Icelandic",
+    "transliteration": "thvo",
+    "russian_meaning": "мыть"
+  },
+  "stage2": {
+    "description": "Рыба, отмывающая течение от собственного блеска."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "composite_two_triangles",
+        "orientation": "left",
+        "color": "accent_cyan"
+      },
+      "head": {
+        "primitive": "oval",
+        "color": "accent_cyan"
+      },
+      "eye": {
+        "style": "double_circle",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "arrow",
+        "color": "white",
+        "side": "right"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "white",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "yellow",
+        "size": "medium",
+        "offset": [
+          15,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "white",
+          "position": "midline"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "composite_two_triangles",
+    "body_color": "accent_cyan",
+    "head_primitive": "oval",
+    "has_bg_block": true,
+    "bg_color": "yellow",
+    "has_tail": true,
+    "tail_primitive": "arrow"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
