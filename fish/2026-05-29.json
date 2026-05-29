@@ -1,0 +1,62 @@
+{
+  "date": "2026-05-29",
+  "stage1": {
+    "word": "hilo",
+    "language": "Spanish",
+    "transliteration": null,
+    "russian_meaning": "нить"
+  },
+  "stage2": {
+    "description": "Рыба, прошивающая воду тонким стежком собственного тела."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "triangle",
+        "orientation": "right",
+        "color": "black"
+      },
+      "head": {
+        "primitive": "oval",
+        "color": "black"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "triangle",
+        "color": "black",
+        "side": "left"
+      },
+      "fin_top": null,
+      "fin_bottom": null,
+      "background_block": {
+        "color": "accent_ochre",
+        "size": "medium",
+        "offset": [
+          0,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "white",
+          "position": "midline"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "triangle",
+    "body_color": "black",
+    "head_primitive": "oval",
+    "has_bg_block": true,
+    "bg_color": "accent_ochre",
+    "has_tail": true,
+    "tail_primitive": "triangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
