@@ -1,0 +1,70 @@
+{
+  "date": "2026-05-30",
+  "stage1": {
+    "word": "ahdas",
+    "language": "Finnish",
+    "transliteration": null,
+    "russian_meaning": "тесный"
+  },
+  "stage2": {
+    "description": "Рыба, чьё тело выросло больше аквариума, в котором она родилась."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "rectangle",
+        "orientation": "right",
+        "color": "accent_deep_red"
+      },
+      "head": {
+        "primitive": "circle",
+        "color": "accent_deep_red"
+      },
+      "eye": {
+        "style": "circle",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "rectangle",
+        "color": "accent_deep_red",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "perpendicular"
+      },
+      "fin_bottom": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "perpendicular"
+      },
+      "background_block": {
+        "color": "yellow",
+        "size": "small",
+        "offset": [
+          -15,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "black",
+          "position": "midline"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "rectangle",
+    "body_color": "accent_deep_red",
+    "head_primitive": "circle",
+    "has_bg_block": true,
+    "bg_color": "yellow",
+    "has_tail": true,
+    "tail_primitive": "rectangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
