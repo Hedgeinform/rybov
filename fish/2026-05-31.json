@@ -1,0 +1,71 @@
+{
+  "date": "2026-05-31",
+  "stage1": {
+    "word": "kawah",
+    "language": "Malay",
+    "transliteration": null,
+    "russian_meaning": "кратер вулкана"
+  },
+  "stage2": {
+    "description": "Рыба, в чьём раскрытом рту догорает небо."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "triangle",
+        "orientation": "left",
+        "color": "accent_deep_red"
+      },
+      "head": {
+        "primitive": "circle",
+        "color": "accent_deep_red"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_top"
+      },
+      "tail": {
+        "primitive": "triangle",
+        "color": "accent_deep_red",
+        "side": "right"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "accent_ochre",
+        "size": "large",
+        "offset": [
+          -15,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "small_triangle",
+          "color": "red",
+          "position": "front_center"
+        },
+        {
+          "type": "horizontal_line",
+          "color": "black",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "triangle",
+    "body_color": "accent_deep_red",
+    "head_primitive": "circle",
+    "has_bg_block": true,
+    "bg_color": "accent_ochre",
+    "has_tail": true,
+    "tail_primitive": "triangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
