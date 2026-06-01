@@ -1,0 +1,66 @@
+{
+  "date": "2026-06-01",
+  "stage1": {
+    "word": "ஊசி",
+    "language": "Tamil",
+    "transliteration": "ūsi",
+    "russian_meaning": "игла"
+  },
+  "stage2": {
+    "description": "Рыба, прошивающая воду одним серебряным стежком, за которым не тянется нить."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "triangle",
+        "orientation": "right",
+        "color": "white"
+      },
+      "head": {
+        "primitive": "triangle",
+        "color": "white"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "triangle",
+        "color": "white",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "black",
+        "size": "large",
+        "offset": [
+          0,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "accent_cyan",
+          "position": "midline"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "triangle",
+    "body_color": "white",
+    "head_primitive": "triangle",
+    "has_bg_block": true,
+    "bg_color": "black",
+    "has_tail": true,
+    "tail_primitive": "triangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
