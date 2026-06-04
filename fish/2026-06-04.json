@@ -1,0 +1,73 @@
+{
+  "date": "2026-06-04",
+  "stage1": {
+    "word": "ọkà",
+    "language": "Yoruba",
+    "transliteration": "oka",
+    "russian_meaning": "кукуруза"
+  },
+  "stage2": {
+    "description": "Рыба, чешуя которой лопается жёлтыми зёрнами под солнцем августа."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle_with_triangle",
+        "orientation": "right",
+        "color": "accent_deep_red"
+      },
+      "head": null,
+      "eye": {
+        "style": "circle",
+        "position": "front_top"
+      },
+      "tail": {
+        "primitive": "arrow",
+        "color": "accent_deep_red",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "yellow",
+        "size": "large",
+        "offset": [
+          15,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "dot",
+          "color": "yellow",
+          "position": "midline"
+        },
+        {
+          "type": "small_square",
+          "color": "black",
+          "position": "low"
+        },
+        {
+          "type": "dot",
+          "color": "yellow",
+          "position": "front_low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle_with_triangle",
+    "body_color": "accent_deep_red",
+    "head_primitive": null,
+    "has_bg_block": true,
+    "bg_color": "yellow",
+    "has_tail": true,
+    "tail_primitive": "arrow"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
