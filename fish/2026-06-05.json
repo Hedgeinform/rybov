@@ -1,0 +1,64 @@
+{
+  "date": "2026-06-05",
+  "stage1": {
+    "word": "چکیدن",
+    "language": "Persian",
+    "transliteration": "chekidan",
+    "russian_meaning": "капать"
+  },
+  "stage2": {
+    "description": "Рыба, по капле стекающая с кончика собственного хвоста."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "ellipse",
+        "orientation": "left",
+        "color": "accent_cyan"
+      },
+      "head": null,
+      "eye": {
+        "style": "dot",
+        "position": "front_center"
+      },
+      "tail": {
+        "primitive": "triangle",
+        "color": "accent_cyan",
+        "side": "right"
+      },
+      "fin_top": null,
+      "fin_bottom": null,
+      "background_block": {
+        "color": "white",
+        "size": "medium",
+        "offset": [
+          15,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "dot",
+          "color": "accent_cyan",
+          "position": "tail_side"
+        },
+        {
+          "type": "dot",
+          "color": "accent_cyan",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "ellipse",
+    "body_color": "accent_cyan",
+    "head_primitive": null,
+    "has_bg_block": true,
+    "bg_color": "white",
+    "has_tail": true,
+    "tail_primitive": "triangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
