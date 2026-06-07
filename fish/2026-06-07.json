@@ -1,0 +1,77 @@
+{
+  "date": "2026-06-07",
+  "stage1": {
+    "word": "крошить",
+    "language": "Russian",
+    "transliteration": "kroshit'",
+    "russian_meaning": "измельчать на мелкие кусочки, крошить хлеб"
+  },
+  "stage2": {
+    "description": "Рыба, что сама себя крошит на хлеб для тех, кто кормит её."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle_with_triangle",
+        "orientation": "left",
+        "color": "accent_deep_red"
+      },
+      "head": null,
+      "eye": {
+        "style": "dot",
+        "position": "front_center"
+      },
+      "tail": {
+        "primitive": "arrow",
+        "color": "accent_ochre",
+        "side": "right"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "perpendicular"
+      },
+      "fin_bottom": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "perpendicular"
+      },
+      "background_block": {
+        "color": "accent_ochre",
+        "size": "medium",
+        "offset": [
+          -15,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "small_square",
+          "color": "black",
+          "position": "midline"
+        },
+        {
+          "type": "small_square",
+          "color": "black",
+          "position": "low"
+        },
+        {
+          "type": "dot",
+          "color": "black",
+          "position": "tail_side"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle_with_triangle",
+    "body_color": "accent_deep_red",
+    "head_primitive": null,
+    "has_bg_block": true,
+    "bg_color": "accent_ochre",
+    "has_tail": true,
+    "tail_primitive": "arrow"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
