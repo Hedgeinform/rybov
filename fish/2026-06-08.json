@@ -1,0 +1,66 @@
+{
+  "date": "2026-06-08",
+  "stage1": {
+    "word": "ühlen",
+    "language": "German",
+    "transliteration": null,
+    "russian_meaning": "охлаждать"
+  },
+  "stage2": {
+    "description": "Рыба, скользящая сквозь воду, как ладонь по горячему лбу."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle",
+        "orientation": "right",
+        "color": "accent_deep_red"
+      },
+      "head": {
+        "primitive": "oval",
+        "color": "accent_deep_red"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "triangle",
+        "color": "accent_deep_red",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "accent_ochre",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "accent_ochre",
+        "size": "large",
+        "offset": [
+          15,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "white",
+          "position": "midline"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle",
+    "body_color": "accent_deep_red",
+    "head_primitive": "oval",
+    "has_bg_block": true,
+    "bg_color": "accent_ochre",
+    "has_tail": true,
+    "tail_primitive": "triangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
