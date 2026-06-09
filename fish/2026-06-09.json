@@ -1,0 +1,71 @@
+{
+  "date": "2026-06-09",
+  "stage1": {
+    "word": "သော့",
+    "language": "Burmese",
+    "transliteration": "thaw",
+    "russian_meaning": "ключ"
+  },
+  "stage2": {
+    "description": "Рыба, в чьём рту поворачивается замок утонувшей двери."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "rectangle",
+        "orientation": "left",
+        "color": "black"
+      },
+      "head": {
+        "primitive": "circle",
+        "color": "accent_ochre"
+      },
+      "eye": {
+        "style": "square",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "rectangle",
+        "color": "black",
+        "side": "right"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "accent_deep_red",
+        "tilt": "perpendicular"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "accent_deep_red",
+        "size": "medium",
+        "offset": [
+          -15,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "small_square",
+          "color": "accent_ochre",
+          "position": "front_center"
+        },
+        {
+          "type": "horizontal_line",
+          "color": "accent_ochre",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "rectangle",
+    "body_color": "black",
+    "head_primitive": "circle",
+    "has_bg_block": true,
+    "bg_color": "accent_deep_red",
+    "has_tail": true,
+    "tail_primitive": "rectangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
