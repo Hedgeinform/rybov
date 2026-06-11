@@ -1,0 +1,64 @@
+{
+  "date": "2026-06-11",
+  "stage1": {
+    "word": "kufa",
+    "language": "Swahili",
+    "transliteration": null,
+    "russian_meaning": "умирать"
+  },
+  "stage2": {
+    "description": "Рыба, медленно растворяющаяся в воде, как сахар, забывший имя реки."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "ellipse",
+        "orientation": "right",
+        "color": "accent_cyan"
+      },
+      "head": null,
+      "eye": {
+        "style": "dot",
+        "position": "front_center"
+      },
+      "tail": null,
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "white",
+        "tilt": "perpendicular"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "blue",
+        "size": "large",
+        "offset": [
+          0,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_band",
+          "color": "white",
+          "position": "midline"
+        },
+        {
+          "type": "dot",
+          "color": "white",
+          "position": "tail_side"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "ellipse",
+    "body_color": "accent_cyan",
+    "head_primitive": null,
+    "has_bg_block": true,
+    "bg_color": "blue",
+    "has_tail": false,
+    "tail_primitive": null
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
