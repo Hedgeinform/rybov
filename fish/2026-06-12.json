@@ -1,0 +1,71 @@
+{
+  "date": "2026-06-12",
+  "stage1": {
+    "word": "דְּלִי",
+    "language": "Hebrew",
+    "transliteration": "d'li",
+    "russian_meaning": "ведро"
+  },
+  "stage2": {
+    "description": "Рыба, плещущаяся на дне жестяного ведра чужой памяти."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "rectangle",
+        "orientation": "right",
+        "color": "accent_ochre"
+      },
+      "head": {
+        "primitive": "circle",
+        "color": "accent_ochre"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "triangle",
+        "color": "accent_ochre",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "black",
+        "size": "large",
+        "offset": [
+          0,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "white",
+          "position": "low"
+        },
+        {
+          "type": "small_square",
+          "color": "white",
+          "position": "tail_side"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "rectangle",
+    "body_color": "accent_ochre",
+    "head_primitive": "circle",
+    "has_bg_block": true,
+    "bg_color": "black",
+    "has_tail": true,
+    "tail_primitive": "triangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
