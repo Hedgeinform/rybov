@@ -1,0 +1,66 @@
+{
+  "date": "2026-06-16",
+  "stage1": {
+    "word": "ਮਿੱਟੀ",
+    "language": "Punjabi",
+    "transliteration": "mittī",
+    "russian_meaning": "земля, почва"
+  },
+  "stage2": {
+    "description": "Рыба, плывущая сквозь землю, как сквозь медленную воду предков."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle_with_triangle",
+        "orientation": "right",
+        "color": "accent_ochre"
+      },
+      "head": {
+        "primitive": "oval",
+        "color": "accent_deep_red"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "triangle",
+        "color": "accent_deep_red",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "black",
+        "size": "large",
+        "offset": [
+          0,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "accent_ochre",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle_with_triangle",
+    "body_color": "accent_ochre",
+    "head_primitive": "oval",
+    "has_bg_block": true,
+    "bg_color": "black",
+    "has_tail": true,
+    "tail_primitive": "triangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
