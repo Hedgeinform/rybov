@@ -1,0 +1,73 @@
+{
+  "date": "2026-06-20",
+  "stage1": {
+    "word": "tüy",
+    "language": "Turkish",
+    "transliteration": "tüy",
+    "russian_meaning": "перо, пушинка"
+  },
+  "stage2": {
+    "description": "Рыба, чешуя которой облетает при каждом вдохе ветра."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle_with_triangle",
+        "orientation": "left",
+        "color": "accent_ochre"
+      },
+      "head": null,
+      "eye": {
+        "style": "dot",
+        "position": "front_center"
+      },
+      "tail": {
+        "primitive": "arrow",
+        "color": "accent_ochre",
+        "side": "right"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "white",
+        "size": "medium",
+        "offset": [
+          15,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "small_triangle",
+          "color": "black",
+          "position": "front_top"
+        },
+        {
+          "type": "small_triangle",
+          "color": "black",
+          "position": "midline"
+        },
+        {
+          "type": "dot",
+          "color": "black",
+          "position": "tail_side"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle_with_triangle",
+    "body_color": "accent_ochre",
+    "head_primitive": null,
+    "has_bg_block": true,
+    "bg_color": "white",
+    "has_tail": true,
+    "tail_primitive": "arrow"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
