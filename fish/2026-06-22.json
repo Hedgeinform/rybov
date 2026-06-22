@@ -1,0 +1,58 @@
+{
+  "date": "2026-06-22",
+  "stage1": {
+    "word": "ぬるい",
+    "language": "Japanese",
+    "transliteration": "nurui",
+    "russian_meaning": "тёплый (недостаточно горячий), чуть тёплый"
+  },
+  "stage2": {
+    "description": "Рыба, уснувшая в чае, который никто не допил."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle",
+        "orientation": "right",
+        "color": "accent_ochre"
+      },
+      "head": {
+        "primitive": "oval",
+        "color": "accent_ochre"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": null,
+      "fin_top": null,
+      "fin_bottom": null,
+      "background_block": {
+        "color": "accent_deep_red",
+        "size": "large",
+        "offset": [
+          0,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "black",
+          "position": "midline"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle",
+    "body_color": "accent_ochre",
+    "head_primitive": "oval",
+    "has_bg_block": true,
+    "bg_color": "accent_deep_red",
+    "has_tail": false,
+    "tail_primitive": null
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
