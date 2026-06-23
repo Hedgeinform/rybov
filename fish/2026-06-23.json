@@ -1,0 +1,72 @@
+{
+  "date": "2026-06-23",
+  "stage1": {
+    "word": "scucire",
+    "language": "Italian",
+    "transliteration": null,
+    "russian_meaning": "распарывать (швы)"
+  },
+  "stage2": {
+    "description": "Рыба, чьи плавники распарываются по швам прошлогодней воды."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle_with_triangle",
+        "orientation": "left",
+        "color": "blue"
+      },
+      "head": null,
+      "eye": {
+        "style": "circle",
+        "position": "front_center"
+      },
+      "tail": {
+        "primitive": "arrow",
+        "color": "accent_cyan",
+        "side": "right"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "white",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": {
+        "primitive": "triangle",
+        "color": "white",
+        "tilt": "tilted_forward"
+      },
+      "background_block": {
+        "color": "accent_cyan",
+        "size": "medium",
+        "offset": [
+          -15,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "white",
+          "position": "midline"
+        },
+        {
+          "type": "small_square",
+          "color": "blue",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle_with_triangle",
+    "body_color": "blue",
+    "head_primitive": null,
+    "has_bg_block": true,
+    "bg_color": "accent_cyan",
+    "has_tail": true,
+    "tail_primitive": "arrow"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
