@@ -1,0 +1,65 @@
+{
+  "date": "2026-06-24",
+  "stage1": {
+    "word": "namak",
+    "language": "Urdu",
+    "transliteration": "namak",
+    "russian_meaning": "соль"
+  },
+  "stage2": {
+    "description": "Рыба, растворяющаяся в собственных слезах, оставляя на дне горсть кристаллов."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "ellipse",
+        "orientation": "right",
+        "color": "accent_cyan"
+      },
+      "head": null,
+      "eye": {
+        "style": "dot",
+        "position": "front_center"
+      },
+      "tail": null,
+      "fin_top": null,
+      "fin_bottom": null,
+      "background_block": {
+        "color": "blue",
+        "size": "large",
+        "offset": [
+          0,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "small_triangle",
+          "color": "white",
+          "position": "low"
+        },
+        {
+          "type": "small_square",
+          "color": "white",
+          "position": "low"
+        },
+        {
+          "type": "dot",
+          "color": "white",
+          "position": "midline"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "ellipse",
+    "body_color": "accent_cyan",
+    "head_primitive": null,
+    "has_bg_block": true,
+    "bg_color": "blue",
+    "has_tail": false,
+    "tail_primitive": null
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
