@@ -1,0 +1,67 @@
+{
+  "date": "2026-06-25",
+  "stage1": {
+    "word": "razem",
+    "language": "Polish",
+    "transliteration": null,
+    "russian_meaning": "вместе"
+  },
+  "stage2": {
+    "description": "Рыба, плывущая в стае, которая давно срослась с ней одним позвоночником."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "rectangle",
+        "orientation": "right",
+        "color": "black"
+      },
+      "head": {
+        "primitive": "circle",
+        "color": "black"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "rectangle",
+        "color": "black",
+        "side": "left"
+      },
+      "fin_top": null,
+      "fin_bottom": null,
+      "background_block": {
+        "color": "accent_ochre",
+        "size": "large",
+        "offset": [
+          0,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "accent_deep_red",
+          "position": "midline"
+        },
+        {
+          "type": "small_square",
+          "color": "accent_deep_red",
+          "position": "tail_side"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "rectangle",
+    "body_color": "black",
+    "head_primitive": "circle",
+    "has_bg_block": true,
+    "bg_color": "accent_ochre",
+    "has_tail": true,
+    "tail_primitive": "rectangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
