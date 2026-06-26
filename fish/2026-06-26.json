@@ -1,0 +1,62 @@
+{
+  "date": "2026-06-26",
+  "stage1": {
+    "word": "kulunut",
+    "language": "Finnish",
+    "transliteration": null,
+    "russian_meaning": "изношенный, потёртый"
+  },
+  "stage2": {
+    "description": "Рыба, чешуя которой стёрта, как монета, прошедшая сквозь тысячи ладоней."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle",
+        "orientation": "right",
+        "color": "accent_ochre"
+      },
+      "head": {
+        "primitive": "oval",
+        "color": "accent_ochre"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "triangle",
+        "color": "accent_ochre",
+        "side": "left"
+      },
+      "fin_top": null,
+      "fin_bottom": null,
+      "background_block": {
+        "color": "black",
+        "size": "medium",
+        "offset": [
+          0,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "white",
+          "position": "midline"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle",
+    "body_color": "accent_ochre",
+    "head_primitive": "oval",
+    "has_bg_block": true,
+    "bg_color": "black",
+    "has_tail": true,
+    "tail_primitive": "triangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
