@@ -1,0 +1,75 @@
+{
+  "date": "2026-06-28",
+  "stage1": {
+    "word": "פַּטִּישׁ",
+    "language": "Hebrew",
+    "transliteration": "patish",
+    "russian_meaning": "молоток"
+  },
+  "stage2": {
+    "description": "Рыба, чьи плавники бьют по наковальне воды, выковывая каждую волну заново."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "triangle",
+        "orientation": "right",
+        "color": "red"
+      },
+      "head": {
+        "primitive": "oval",
+        "color": "black"
+      },
+      "eye": {
+        "style": "square",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "rectangle",
+        "color": "black",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "perpendicular"
+      },
+      "fin_bottom": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "perpendicular"
+      },
+      "background_block": {
+        "color": "accent_ochre",
+        "size": "medium",
+        "offset": [
+          0,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "black",
+          "position": "midline"
+        },
+        {
+          "type": "small_square",
+          "color": "red",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "triangle",
+    "body_color": "red",
+    "head_primitive": "oval",
+    "has_bg_block": true,
+    "bg_color": "accent_ochre",
+    "has_tail": true,
+    "tail_primitive": "rectangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
