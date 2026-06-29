@@ -1,0 +1,71 @@
+{
+  "date": "2026-06-29",
+  "stage1": {
+    "word": "тачка",
+    "language": "Russian",
+    "transliteration": "tachka",
+    "russian_meaning": "тачка, ручная тележка с одним колесом"
+  },
+  "stage2": {
+    "description": "Рыба, катящая по илу единственное ржавое колесо своего сердца."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "rectangle",
+        "orientation": "right",
+        "color": "accent_ochre"
+      },
+      "head": {
+        "primitive": "circle",
+        "color": "accent_deep_red"
+      },
+      "eye": {
+        "style": "double_circle",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "rectangle",
+        "color": "accent_ochre",
+        "side": "left"
+      },
+      "fin_top": null,
+      "fin_bottom": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "perpendicular"
+      },
+      "background_block": {
+        "color": "black",
+        "size": "medium",
+        "offset": [
+          0,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "accent_deep_red",
+          "position": "low"
+        },
+        {
+          "type": "dot",
+          "color": "accent_deep_red",
+          "position": "midline"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "rectangle",
+    "body_color": "accent_ochre",
+    "head_primitive": "circle",
+    "has_bg_block": true,
+    "bg_color": "black",
+    "has_tail": true,
+    "tail_primitive": "rectangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
