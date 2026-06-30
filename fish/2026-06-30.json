@@ -1,0 +1,75 @@
+{
+  "date": "2026-06-30",
+  "stage1": {
+    "word": "scopa",
+    "language": "Italian",
+    "transliteration": null,
+    "russian_meaning": "метла"
+  },
+  "stage2": {
+    "description": "Рыба, чьи плавники сметают со дна забытую пыль теней."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "triangle",
+        "orientation": "left",
+        "color": "black"
+      },
+      "head": {
+        "primitive": "oval",
+        "color": "black"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "triangle",
+        "color": "black",
+        "side": "right"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "accent_ochre",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": {
+        "primitive": "triangle",
+        "color": "accent_ochre",
+        "tilt": "tilted_backward"
+      },
+      "background_block": {
+        "color": "accent_deep_red",
+        "size": "large",
+        "offset": [
+          0,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "accent_ochre",
+          "position": "low"
+        },
+        {
+          "type": "dot",
+          "color": "accent_ochre",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "triangle",
+    "body_color": "black",
+    "head_primitive": "oval",
+    "has_bg_block": true,
+    "bg_color": "accent_deep_red",
+    "has_tail": true,
+    "tail_primitive": "triangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
