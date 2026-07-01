@@ -1,0 +1,66 @@
+{
+  "date": "2026-07-01",
+  "stage1": {
+    "word": "tallér",
+    "language": "Hungarian",
+    "transliteration": "tallér",
+    "russian_meaning": "тарелка (мелкая), блюдце"
+  },
+  "stage2": {
+    "description": "Рыба, круглая и плоская, что всплывает на поверхность, будто кто-то накрыл ею стол вечернего озера."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle",
+        "orientation": "right",
+        "color": "accent_deep_red"
+      },
+      "head": {
+        "primitive": "circle",
+        "color": "accent_deep_red"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "rectangle",
+        "color": "accent_deep_red",
+        "side": "left"
+      },
+      "fin_top": null,
+      "fin_bottom": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "perpendicular"
+      },
+      "background_block": {
+        "color": "accent_ochre",
+        "size": "large",
+        "offset": [
+          0,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "black",
+          "position": "midline"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle",
+    "body_color": "accent_deep_red",
+    "head_primitive": "circle",
+    "has_bg_block": true,
+    "bg_color": "accent_ochre",
+    "has_tail": true,
+    "tail_primitive": "rectangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
