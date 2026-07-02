@@ -1,0 +1,68 @@
+{
+  "date": "2026-07-02",
+  "stage1": {
+    "word": "sopor",
+    "language": "Latin",
+    "transliteration": null,
+    "russian_meaning": "глубокий сон"
+  },
+  "stage2": {
+    "description": "Рыба, дышащая жабрами чужого сна, забывшая, где кончается вода и начинается веко спящего бога."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "ellipse",
+        "orientation": "left",
+        "color": "blue"
+      },
+      "head": null,
+      "eye": {
+        "style": "double_circle",
+        "position": "front_center"
+      },
+      "tail": {
+        "primitive": "arrow",
+        "color": "accent_cyan",
+        "side": "right"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "accent_ochre",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "black",
+        "size": "large",
+        "offset": [
+          0,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_band",
+          "color": "accent_cyan",
+          "position": "midline"
+        },
+        {
+          "type": "dot",
+          "color": "accent_ochre",
+          "position": "front_top"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "ellipse",
+    "body_color": "blue",
+    "head_primitive": null,
+    "has_bg_block": true,
+    "bg_color": "black",
+    "has_tail": true,
+    "tail_primitive": "arrow"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
