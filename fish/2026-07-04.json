@@ -1,0 +1,66 @@
+{
+  "date": "2026-07-04",
+  "stage1": {
+    "word": "sarung",
+    "language": "Indonesian",
+    "transliteration": null,
+    "russian_meaning": "чехол, оболочка"
+  },
+  "stage2": {
+    "description": "Рыба, носящая собственное тело как одолженный саронг, готовая сбросить его на первом берегу."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle_with_triangle",
+        "orientation": "right",
+        "color": "accent_ochre"
+      },
+      "head": {
+        "primitive": "oval",
+        "color": "accent_ochre"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "arrow",
+        "color": "accent_deep_red",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "accent_deep_red",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "yellow",
+        "size": "medium",
+        "offset": [
+          15,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_band",
+          "color": "white",
+          "position": "midline"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle_with_triangle",
+    "body_color": "accent_ochre",
+    "head_primitive": "oval",
+    "has_bg_block": true,
+    "bg_color": "yellow",
+    "has_tail": true,
+    "tail_primitive": "arrow"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
