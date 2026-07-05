@@ -1,0 +1,71 @@
+{
+  "date": "2026-07-05",
+  "stage1": {
+    "word": "σφυρίζω",
+    "language": "Greek",
+    "transliteration": "sfyrízo",
+    "russian_meaning": "свистеть"
+  },
+  "stage2": {
+    "description": "Рыба, чей каждый выдох — свист, который слышат только утонувшие чайники."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "rectangle",
+        "orientation": "right",
+        "color": "accent_ochre"
+      },
+      "head": {
+        "primitive": "circle",
+        "color": "accent_ochre"
+      },
+      "eye": {
+        "style": "double_circle",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "triangle",
+        "color": "black",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "tilted_forward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "accent_cyan",
+        "size": "medium",
+        "offset": [
+          15,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "white",
+          "position": "front_top"
+        },
+        {
+          "type": "dot",
+          "color": "black",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "rectangle",
+    "body_color": "accent_ochre",
+    "head_primitive": "circle",
+    "has_bg_block": true,
+    "bg_color": "accent_cyan",
+    "has_tail": true,
+    "tail_primitive": "triangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
