@@ -1,0 +1,66 @@
+{
+  "date": "2026-07-07",
+  "stage1": {
+    "word": "jarullo",
+    "language": "Aragonese",
+    "transliteration": null,
+    "russian_meaning": "кувшин"
+  },
+  "stage2": {
+    "description": "Рыба, несущая в брюхе глоток воды, которого никто не выпил."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle",
+        "orientation": "right",
+        "color": "black"
+      },
+      "head": {
+        "primitive": "oval",
+        "color": "black"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "triangle",
+        "color": "black",
+        "side": "left"
+      },
+      "fin_top": null,
+      "fin_bottom": {
+        "primitive": "triangle",
+        "color": "accent_cyan",
+        "tilt": "perpendicular"
+      },
+      "background_block": {
+        "color": "accent_ochre",
+        "size": "medium",
+        "offset": [
+          0,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "dot",
+          "color": "accent_cyan",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle",
+    "body_color": "black",
+    "head_primitive": "oval",
+    "has_bg_block": true,
+    "bg_color": "accent_ochre",
+    "has_tail": true,
+    "tail_primitive": "triangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
