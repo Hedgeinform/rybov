@@ -1,0 +1,71 @@
+{
+  "date": "2026-07-09",
+  "stage1": {
+    "word": "куче",
+    "language": "Bulgarian",
+    "transliteration": "kuche",
+    "russian_meaning": "собака"
+  },
+  "stage2": {
+    "description": "Рыба, что скулит на луну сквозь толщу воды."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle",
+        "orientation": "right",
+        "color": "blue"
+      },
+      "head": {
+        "primitive": "oval",
+        "color": "blue"
+      },
+      "eye": {
+        "style": "double_circle",
+        "position": "head_top"
+      },
+      "tail": {
+        "primitive": "triangle",
+        "color": "blue",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "accent_cyan",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "yellow",
+        "size": "medium",
+        "offset": [
+          15,
+          -30
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "white",
+          "position": "midline"
+        },
+        {
+          "type": "dot",
+          "color": "white",
+          "position": "front_top"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle",
+    "body_color": "blue",
+    "head_primitive": "oval",
+    "has_bg_block": true,
+    "bg_color": "yellow",
+    "has_tail": true,
+    "tail_primitive": "triangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
