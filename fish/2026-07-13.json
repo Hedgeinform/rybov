@@ -1,0 +1,73 @@
+{
+  "date": "2026-07-13",
+  "stage1": {
+    "word": "крошить",
+    "language": "Russian",
+    "transliteration": "kroshit'",
+    "russian_meaning": "измельчать на мелкие кусочки, крошки"
+  },
+  "stage2": {
+    "description": "Рыба, рассыпающаяся хлебными крошками по чужим ладоням."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle_with_triangle",
+        "orientation": "right",
+        "color": "accent_ochre"
+      },
+      "head": null,
+      "eye": {
+        "style": "dot",
+        "position": "front_center"
+      },
+      "tail": null,
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "perpendicular"
+      },
+      "fin_bottom": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "perpendicular"
+      },
+      "background_block": {
+        "color": "yellow",
+        "size": "large",
+        "offset": [
+          0,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "small_square",
+          "color": "accent_ochre",
+          "position": "low"
+        },
+        {
+          "type": "small_square",
+          "color": "black",
+          "position": "tail_side"
+        },
+        {
+          "type": "dot",
+          "color": "black",
+          "position": "midline"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle_with_triangle",
+    "body_color": "accent_ochre",
+    "head_primitive": null,
+    "has_bg_block": true,
+    "bg_color": "yellow",
+    "has_tail": false,
+    "tail_primitive": null
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
