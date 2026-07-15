@@ -1,0 +1,60 @@
+{
+  "date": "2026-07-15",
+  "stage1": {
+    "word": "tenger",
+    "language": "Hungarian",
+    "transliteration": null,
+    "russian_meaning": "море"
+  },
+  "stage2": {
+    "description": "Рыба, чьё тело — лишь складка на теле моря, забывшего её выпустить."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle",
+        "orientation": "right",
+        "color": "blue"
+      },
+      "head": null,
+      "eye": {
+        "style": "dot",
+        "position": "front_center"
+      },
+      "tail": null,
+      "fin_top": null,
+      "fin_bottom": null,
+      "background_block": {
+        "color": "accent_cyan",
+        "size": "large",
+        "offset": [
+          0,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "white",
+          "position": "midline"
+        },
+        {
+          "type": "horizontal_line",
+          "color": "white",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle",
+    "body_color": "blue",
+    "head_primitive": null,
+    "has_bg_block": true,
+    "bg_color": "accent_cyan",
+    "has_tail": false,
+    "tail_primitive": null
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
