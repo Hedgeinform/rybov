@@ -1,0 +1,58 @@
+{
+  "date": "2026-07-16",
+  "stage1": {
+    "word": "kudde",
+    "language": "Swedish",
+    "transliteration": null,
+    "russian_meaning": "подушка"
+  },
+  "stage2": {
+    "description": "Рыба, спящая внутри чужого сна, из которого никто её не будит."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle",
+        "orientation": "right",
+        "color": "blue"
+      },
+      "head": {
+        "primitive": "oval",
+        "color": "blue"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": null,
+      "fin_top": null,
+      "fin_bottom": null,
+      "background_block": {
+        "color": "black",
+        "size": "large",
+        "offset": [
+          0,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "accent_cyan",
+          "position": "midline"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle",
+    "body_color": "blue",
+    "head_primitive": "oval",
+    "has_bg_block": true,
+    "bg_color": "black",
+    "has_tail": false,
+    "tail_primitive": null
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
