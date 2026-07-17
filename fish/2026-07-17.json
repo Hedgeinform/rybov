@@ -1,0 +1,71 @@
+{
+  "date": "2026-07-17",
+  "stage1": {
+    "word": "قَلَم",
+    "language": "Arabic",
+    "transliteration": "qalam",
+    "russian_meaning": "перо, ручка (для письма)"
+  },
+  "stage2": {
+    "description": "Рыба, оставляющая за собой чернильный след каждого непроизнесённого слова."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "triangle",
+        "orientation": "right",
+        "color": "black"
+      },
+      "head": {
+        "primitive": "circle",
+        "color": "black"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "arrow",
+        "color": "accent_deep_red",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "black",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "accent_ochre",
+        "size": "large",
+        "offset": [
+          -15,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_band",
+          "color": "black",
+          "position": "midline"
+        },
+        {
+          "type": "dot",
+          "color": "black",
+          "position": "tail_side"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "triangle",
+    "body_color": "black",
+    "head_primitive": "circle",
+    "has_bg_block": true,
+    "bg_color": "accent_ochre",
+    "has_tail": true,
+    "tail_primitive": "arrow"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
