@@ -1,0 +1,66 @@
+{
+  "date": "2026-07-19",
+  "stage1": {
+    "word": "дъжд",
+    "language": "Bulgarian",
+    "transliteration": "dŭzhd",
+    "russian_meaning": "дождь"
+  },
+  "stage2": {
+    "description": "Рыба, что учится дышать, лишь когда небо забывает закрыть рот."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle_with_triangle",
+        "orientation": "right",
+        "color": "blue"
+      },
+      "head": {
+        "primitive": "circle",
+        "color": "accent_ochre"
+      },
+      "eye": {
+        "style": "circle",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "triangle",
+        "color": "blue",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "accent_ochre",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "yellow",
+        "size": "large",
+        "offset": [
+          0,
+          -15
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "yellow",
+          "position": "midline"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle_with_triangle",
+    "body_color": "blue",
+    "head_primitive": "circle",
+    "has_bg_block": true,
+    "bg_color": "yellow",
+    "has_tail": true,
+    "tail_primitive": "triangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
