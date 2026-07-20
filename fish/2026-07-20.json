@@ -1,0 +1,66 @@
+{
+  "date": "2026-07-20",
+  "stage1": {
+    "word": "hallgat",
+    "language": "Hungarian",
+    "transliteration": null,
+    "russian_meaning": "молчать; слушать"
+  },
+  "stage2": {
+    "description": "Рыба, чьи жабры вбирают чужие слова, но рот запечатан илом."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "rectangle",
+        "orientation": "right",
+        "color": "black"
+      },
+      "head": {
+        "primitive": "circle",
+        "color": "accent_ochre"
+      },
+      "eye": {
+        "style": "square",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "rectangle",
+        "color": "black",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "accent_ochre",
+        "tilt": "perpendicular"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "accent_deep_red",
+        "size": "medium",
+        "offset": [
+          15,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_band",
+          "color": "accent_ochre",
+          "position": "front_center"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "rectangle",
+    "body_color": "black",
+    "head_primitive": "circle",
+    "has_bg_block": true,
+    "bg_color": "accent_deep_red",
+    "has_tail": true,
+    "tail_primitive": "rectangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
