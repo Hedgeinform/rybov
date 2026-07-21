@@ -1,0 +1,66 @@
+{
+  "date": "2026-07-21",
+  "stage1": {
+    "word": "دَلْو",
+    "language": "Arabic",
+    "transliteration": "dalw",
+    "russian_meaning": "ведро"
+  },
+  "stage2": {
+    "description": "Рыба, живущая в ведре, из которого её каждый вечер выплёскивают обратно в небо."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle",
+        "orientation": "right",
+        "color": "blue"
+      },
+      "head": {
+        "primitive": "circle",
+        "color": "blue"
+      },
+      "eye": {
+        "style": "double_circle",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "triangle",
+        "color": "accent_cyan",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "white",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "yellow",
+        "size": "large",
+        "offset": [
+          0,
+          -15
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "white",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle",
+    "body_color": "blue",
+    "head_primitive": "circle",
+    "has_bg_block": true,
+    "bg_color": "yellow",
+    "has_tail": true,
+    "tail_primitive": "triangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
