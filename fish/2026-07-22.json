@@ -1,0 +1,58 @@
+{
+  "date": "2026-07-22",
+  "stage1": {
+    "word": "дупло",
+    "language": "Russian",
+    "transliteration": "duplo",
+    "russian_meaning": "полость в стволе дерева"
+  },
+  "stage2": {
+    "description": "Рыба, спящая в дупле сна, которое дерево видит о реке."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "semicircle",
+        "orientation": "right",
+        "color": "blue"
+      },
+      "head": {
+        "primitive": "oval",
+        "color": "blue"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": null,
+      "fin_top": null,
+      "fin_bottom": null,
+      "background_block": {
+        "color": "accent_ochre",
+        "size": "large",
+        "offset": [
+          0,
+          0
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_line",
+          "color": "white",
+          "position": "low"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "semicircle",
+    "body_color": "blue",
+    "head_primitive": "oval",
+    "has_bg_block": true,
+    "bg_color": "accent_ochre",
+    "has_tail": false,
+    "tail_primitive": null
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
