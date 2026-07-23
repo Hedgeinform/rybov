@@ -1,0 +1,71 @@
+{
+  "date": "2026-07-23",
+  "stage1": {
+    "word": "gwadd",
+    "language": "Welsh",
+    "transliteration": null,
+    "russian_meaning": "крот"
+  },
+  "stage2": {
+    "description": "Рыба, роющая тоннели в иле, где солнце уже не помнит своего имени."
+  },
+  "stage3": {
+    "dsl": {
+      "body": {
+        "primitive": "triangle",
+        "orientation": "right",
+        "color": "black"
+      },
+      "head": {
+        "primitive": "triangle",
+        "color": "black"
+      },
+      "eye": {
+        "style": "dot",
+        "position": "head_center"
+      },
+      "tail": {
+        "primitive": "rectangle",
+        "color": "accent_ochre",
+        "side": "left"
+      },
+      "fin_top": {
+        "primitive": "triangle",
+        "color": "accent_ochre",
+        "tilt": "tilted_backward"
+      },
+      "fin_bottom": null,
+      "background_block": {
+        "color": "accent_deep_red",
+        "size": "large",
+        "offset": [
+          0,
+          15
+        ]
+      },
+      "accents": [
+        {
+          "type": "horizontal_band",
+          "color": "black",
+          "position": "low"
+        },
+        {
+          "type": "small_square",
+          "color": "accent_ochre",
+          "position": "tail_side"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "body_primitive": "triangle",
+    "body_color": "black",
+    "head_primitive": "triangle",
+    "has_bg_block": true,
+    "bg_color": "accent_deep_red",
+    "has_tail": true,
+    "tail_primitive": "rectangle"
+  },
+  "renderer_version": "1.0.0",
+  "model_version": "anthropic/claude-opus-4.7"
+}
